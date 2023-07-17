@@ -5,7 +5,7 @@
 		IconBrandTwitterFilled,
 		IconBrandGithubFilled
 	} from '@tabler/icons-svelte';
-	export let size = 30
+	export let size = 28
 </script>
 
 <nav>

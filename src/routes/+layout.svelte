@@ -10,7 +10,7 @@
 	});
 </script>
 
-<div class="sm:px-16 px-2">
+<div class="flex flex-col min-h-screen sm:px-16 px-2">
 	<Header />
 	<slot />
 	<Footer />
