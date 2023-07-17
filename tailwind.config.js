@@ -12,8 +12,16 @@ export default {
 	},
 	plugins: [require('daisyui')],
 	daisyui: {
-		themes: ['cupcake', 'dracula'],
-		darkTheme: 'dracula',
+		themes: [
+			{
+				cupcake: {
+					...require('daisyui/src/theming/themes')['[data-theme=cupcake]'],
+					neutral: 'white'
+				}
+			},
+			'night'
+		],
+		darkTheme: 'night',
 		base: true,
 		styled: true,
 		utils: true,

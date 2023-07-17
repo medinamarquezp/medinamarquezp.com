@@ -6,3 +6,7 @@
 .hover-scale {
 	@apply transition duration-100 hover:scale-110;
 }
+
+.hover-scale-sm {
+	@apply transition duration-100 hover:scale-105;
+}

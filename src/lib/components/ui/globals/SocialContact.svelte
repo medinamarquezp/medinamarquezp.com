@@ -6,10 +6,11 @@
 		IconBrandGithubFilled
 	} from '@tabler/icons-svelte';
 	export let size = 28
+	export let justify = true
 </script>
 
 <nav>
-	<ul class="flex flex-row align-top gap-5">
+	<ul class:justify-center={justify} class="flex flex-row align-top gap-5 sm:justify-start">
 		<li>
 			<a href="mailto:medinamarquezp@gmail.com" target="_blank"
 				><IconAt class="hover-scale" {size} stroke={3} />

@@ -1,5 +1,5 @@
 <script>
-	import DarkmodeSwitcher from '$lib/components/ui/DarkmodeSwitcher.svelte';
+	import DarkmodeSwitcher from '$lib/components/ui/globals/DarkmodeSwitcher.svelte';
 	import { IconMenuDeep } from '@tabler/icons-svelte';
 </script>
 
