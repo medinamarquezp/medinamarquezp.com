@@ -10,5 +10,15 @@ export default {
 			}
 		}
 	},
-	plugins: []
+	plugins: [require('daisyui')],
+	daisyui: {
+		themes: ['cupcake', 'dracula'],
+		darkTheme: 'dracula',
+		base: true,
+		styled: true,
+		utils: true,
+		rtl: false,
+		prefix: '',
+		logs: true
+	}
 };
