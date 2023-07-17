@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@tabler/icons-svelte": "^2.25.0",
 		"theme-change": "^2.5.0"
 	}
 }

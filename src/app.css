@@ -2,3 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hover-scale {
+	@apply transition duration-100 hover:scale-110;
+}
