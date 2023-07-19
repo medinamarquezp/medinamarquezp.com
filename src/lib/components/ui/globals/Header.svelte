@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import { IconMenuDeep } from '@tabler/icons-svelte';
+	import MainNav from './MainNav.svelte';
 	import DarkmodeSwitcher from './DarkmodeSwitcher.svelte';
 </script>
 
@@ -10,11 +11,7 @@
 		</a>
 	</div>
 	<div class="navbar-center hidden sm:flex">
-		<ul class="menu menu-lg menu-horizontal px-1">
-			<li><a class="hover:bg-neutral" href="/about" title="Sobre mí">sobre mí</a></li>
-			<li><a class="hover:bg-neutral" href="/blog" title="Blog">blog</a></li>
-			<li><a class="hover:bg-neutral" href="/projects" title="Proyectos">proyectos</a></li>
-		</ul>
+		<MainNav classList="menu menu-lg menu-horizontal px-1" />
 	</div>
 	<div class="navbar-end">
 		<DarkmodeSwitcher />
@@ -22,19 +19,9 @@
 			<summary class="btn btn-ghost hover-scale hover:bg-transparent sm:hidden">
 				<IconMenuDeep size={32} stroke={3} />
 			</summary>
-			<ul
-				class="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-			>
-				<li><a class="hover:bg-neutral" href="/about" title="Sobre mí">sobre mí</a></li>
-				<li><a class="hover:bg-neutral" href="/blog" title="Blog">blog</a></li>
-				<li><a class="hover:bg-neutral" href="/projects" title="Proyectos">proyectos</a></li>
-			</ul>
+			<MainNav
+				classList="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+			/>
 		</details>
 	</div>
 </div>
-
-<style>
-	.menu-lg a {
-		@apply text-xl rounded-full;
-	}
-</style>

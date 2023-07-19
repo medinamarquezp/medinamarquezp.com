@@ -13,6 +13,7 @@ p:last-child {
 
 ::-webkit-scrollbar {
 	height: 4px;
+	width: 5px;
 }
 
 ::-webkit-scrollbar-track {
