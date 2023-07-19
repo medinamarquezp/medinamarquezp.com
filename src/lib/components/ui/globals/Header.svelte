@@ -1,6 +1,6 @@
 <script>
 	import { IconMenuDeep } from '@tabler/icons-svelte';
-	import DarkmodeSwitcher from '$lib/components/ui/globals/DarkmodeSwitcher.svelte';
+	import DarkmodeSwitcher from './DarkmodeSwitcher.svelte';
 </script>
 
 <div class="navbar">

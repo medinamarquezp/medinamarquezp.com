@@ -1,5 +1,5 @@
 <script>
-	import SocialContact from "$lib/components/ui/globals/SocialContact.svelte";
+	import SocialContact from "./SocialContact.svelte";
 	const year = new Date().getFullYear();
 	const coords = `39°33'38"N 2°40'7"E`;
 </script>
