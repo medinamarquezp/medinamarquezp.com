@@ -1,6 +1,6 @@
 <script>
-	import DarkmodeSwitcher from '$lib/components/ui/globals/DarkmodeSwitcher.svelte';
 	import { IconMenuDeep } from '@tabler/icons-svelte';
+	import DarkmodeSwitcher from '$lib/components/ui/globals/DarkmodeSwitcher.svelte';
 </script>
 
 <div class="navbar">
@@ -11,9 +11,9 @@
 	</div>
 	<div class="navbar-center hidden sm:flex">
 		<ul class="menu menu-lg menu-horizontal px-1">
-			<li><a href="/about" title="Sobre mí">sobre mí</a></li>
-			<li><a href="/blog" title="Blog">blog</a></li>
-			<li><a href="/projects" title="Proyectos">proyectos</a></li>
+			<li><a class="hover:bg-neutral" href="/about" title="Sobre mí">sobre mí</a></li>
+			<li><a class="hover:bg-neutral" href="/blog" title="Blog">blog</a></li>
+			<li><a class="hover:bg-neutral" href="/projects" title="Proyectos">proyectos</a></li>
 		</ul>
 	</div>
 	<div class="navbar-end">
@@ -25,9 +25,9 @@
 			<ul
 				class="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
 			>
-				<li><a href="/about" title="Sobre mí">sobre mí</a></li>
-				<li><a href="/blog" title="Blog">blog</a></li>
-				<li><a href="/projects" title="Proyectos">proyectos</a></li>
+				<li><a class="hover:bg-neutral" href="/about" title="Sobre mí">sobre mí</a></li>
+				<li><a class="hover:bg-neutral" href="/blog" title="Blog">blog</a></li>
+				<li><a class="hover:bg-neutral" href="/projects" title="Proyectos">proyectos</a></li>
 			</ul>
 		</details>
 	</div>

@@ -1,12 +1,10 @@
 <script>
-
 	import { IconMoon, IconSunLow } from "@tabler/icons-svelte";
-
 </script>
 <label class="swap swap-rotate hover-scale btn btn-ghost hover:bg-transparent">
 	<input
 		type="checkbox"
-		data-toggle-theme="dracula,cupcake"
+		data-toggle-theme="night,cupcake"
 		data-act-class="ACTIVECLASS"
 	/>
 	<IconSunLow class="swap-on fill-current w-8 h-8" />

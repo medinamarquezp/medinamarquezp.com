@@ -3,10 +3,31 @@
 @tailwind components;
 @tailwind utilities;
 
-.hover-scale {
-	@apply transition duration-100 hover:scale-110;
+p {
+	@apply mb-6;
 }
 
-.hover-scale-sm {
-	@apply transition duration-100 hover:scale-105;
+p:last-child {
+	@apply mb-0;
+}
+
+::-webkit-scrollbar {
+	height: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.hover-scale {
+	@apply transition duration-100 hover:scale-110;
 }
