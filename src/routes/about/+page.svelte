@@ -7,7 +7,6 @@
 		'Adaptavilidad al cambio',
 		'Aprendizaje continuo',
 		'Atención al detalle',
-		'Autonomía en el aprendizaje',
 		'Capacidad de abstracción',
 		'Capacidad de autogestión',
 		'Pensamiento analítico',
@@ -109,7 +108,7 @@
 	/>
 </svelte:head>
 
-<div class="mx-12 lg:mx-24 my-12 text-xl">
+<div class="mx-6 sm:mx-12 lg:mx-24 my-12 text-xl">
 	<section
 		class="flex flex-col-reverse md:flex-row gap-6 items-center md:items-start"
 	>

@@ -11,7 +11,7 @@
 		</a>
 	</div>
 	<div class="navbar-center hidden sm:flex">
-		<MainNav classList="menu menu-lg menu-horizontal px-1" />
+		<MainNav classList="menu menu-lg menu-horizontal gap-1" />
 	</div>
 	<div class="navbar-end">
 		<DarkmodeSwitcher />
