@@ -33,7 +33,7 @@
 		<div
 			class="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]"
 		>
-			<div class="whitespace-nowrap">{date}</div>
+			<div class="whitespace-nowrap text-slate-500 lg:-mt-6">{date}</div>
 		</div>
 	</div>
 	</a>
