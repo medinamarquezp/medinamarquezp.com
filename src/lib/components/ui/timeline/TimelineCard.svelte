@@ -26,7 +26,7 @@
 	>
 		<div class="flex {justify} w-full mx-auto items-center">
 			<div class="w-full lg:w-1/2 {padding}">
-				<div class="p-8 bg-neutral rounded text-lg shadow">
+				<div class="p-8 bg-neutral rounded-lg text-lg shadow">
 					<div class="flex flex-row">
 						{#if item.brand}
 							<img

@@ -8,7 +8,7 @@
 	<li>
 		<a
 			class:bg-neutral={isActive('about')}
-			class="hover:bg-neutral"
+			class="hover:bg-neutral transition"
 			href="/about"
 			title="Sobre mí">sobre mí</a
 		>
@@ -16,7 +16,7 @@
 	<li>
 		<a
 			class:bg-neutral={isActive('blog')}
-			class="hover:bg-neutral"
+			class="hover:bg-neutral transition"
 			href="/blog"
 			title="Blog">blog</a
 		>
@@ -24,7 +24,7 @@
 	<li>
 		<a
 			class:bg-neutral={isActive('projects')}
-			class="hover:bg-neutral"
+			class="hover:bg-neutral transition"
 			href="/projects"
 			title="Proyectos">proyectos</a
 		>

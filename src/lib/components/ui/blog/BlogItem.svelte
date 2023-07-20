@@ -5,7 +5,7 @@
 </script>
 
 <article class="relative group">
-	<a href={link} class="flex p-6 rounded-xl bg-neutral sm:bg-transparent hover:bg-neutral">
+	<a href={link} class="flex p-6 rounded-xl bg-neutral sm:bg-transparent hover:bg-neutral transition">
 		<svg
 		viewBox="0 0 9 9"
 		class="hidden absolute right-full mr-6 top-2 md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block"

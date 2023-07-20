@@ -4,7 +4,7 @@
 	import Header from '$lib/components/ui/globals/Header.svelte';
 	import Footer from '$lib/components/ui/globals/Footer.svelte';
 	import '../app.css';
-	
+
 	onMount(() => {
 		themeChange(false);
 	});

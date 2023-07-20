@@ -9,7 +9,7 @@
 		'hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-neutral-content sm:block';
 </script>
 
-<div class="mx-6 sm:mx-12 lg:mx-24 my-12 text-xl">
+<div class="mx-6 sm:mx-12 lg:mx-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in">
 	<FeedHeader title="Últimas novedades" feedPath="/">
 		<svelte:fragment slot="description">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
@@ -22,7 +22,7 @@
 		<div class={timelineClasses} />
 		<div class="space-y-16">
 			<BlogItem
-				link="/"
+				link="/blog/123"
 				date="April 24, 2023"
 				title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 			>
