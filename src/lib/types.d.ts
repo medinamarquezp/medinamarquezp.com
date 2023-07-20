@@ -9,6 +9,11 @@ export interface TimelineItem {
 	techs: Tech[];
 }
 
+export interface Filter {
+	label: string;
+	path: string;
+}
+
 export interface Tech {
 	icon: string;
 	label: string;
