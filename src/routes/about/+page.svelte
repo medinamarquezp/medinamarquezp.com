@@ -39,7 +39,7 @@
 		{
 			type: 'academic',
 			company: 'IEBS',
-			brand: 'https://www.iebschool.com/frontend/assets/img/mkt/iebs_avatar.png',
+			brand: '/timeline_brands/iebs.png',
 			title: 'Postgrado en Ingeniería y arquitectura Blockchain',
 			start: new Date('2022-10-01'),
 			end: null,
@@ -55,7 +55,7 @@
 		{
 			type: 'academic',
 			company: 'Ilerna Online',
-			brand: 'https://play-lh.googleusercontent.com/hui4jsM8e9O-WV6bUmWihZCGdIu3vRIyril9b2Mt3mM_UITvOo3oBhHWUHq3zUD7oog',
+			brand: '/timeline_brands/ilerna.png',
 			title: 'Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)',
 			start: new Date('2018-09-01'),
 			end: new Date('2019-06-01'),
@@ -74,7 +74,7 @@
 		{
 			type: 'academic',
 			company: 'Ilerna Online',
-			brand: 'https://play-lh.googleusercontent.com/hui4jsM8e9O-WV6bUmWihZCGdIu3vRIyril9b2Mt3mM_UITvOo3oBhHWUHq3zUD7oog',
+			brand: '/timeline_brands/ilerna.png',
 			title: 'Técnico Superior en Desarrollo de Aplicaciones Web (DAW)',
 			start: new Date('2016-09-01'),
 			end: new Date('2018-06-01'),
