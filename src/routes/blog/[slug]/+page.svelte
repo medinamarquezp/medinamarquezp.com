@@ -1,6 +1,6 @@
 <script>
+	import ShareOnTwitter from '$lib/components/ui/globals/ShareOnTwitter.svelte';
 	import LatestNews from '$lib/components/ui/latest-news/LatestNews.svelte';
-	import { IconBrandTwitterFilled } from '@tabler/icons-svelte';
 </script>
 
 <svelte:head>
@@ -90,10 +90,7 @@
 		</p>
 	</div>
 	<div class="flex justify-center mt-8">
-		<a
-			class="flex flex-row font-normal text-white gap-2 items-center py-4 px-6 rounded-full bg-blue-500 hover-scale"
-			href="/"><IconBrandTwitterFilled size={22} /> Compartelo en Twitter 💪</a
-		>
+		<ShareOnTwitter path="https://test.es/lol" content="Lorem ipsum blandit" />
 	</div>
 </div>
 <div class="mx-6 sm:mx-12 lg:mx-24 mt-0 mb-12 text-xl">

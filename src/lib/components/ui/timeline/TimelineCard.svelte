@@ -66,9 +66,9 @@
 			class="rounded-full bg-primary border-white border-4 w-10 h-10 absolute left-1/2 -translate-y-4 lg:translate-y-0 transform -translate-x-1/2 flex items-center justify-center"
 		>
 			{#if item.type === 'academic'}
-				<IconBriefcase class="text-white" size={24} stroke={2} />
-			{:else if item.type === 'professional'}
 				<IconSchool class="text-white" size={24} stroke={2} />
+			{:else if item.type === 'professional'}
+				<IconBriefcase class="text-white" size={24} stroke={2} />
 			{/if}
 		</div>
 	</div>

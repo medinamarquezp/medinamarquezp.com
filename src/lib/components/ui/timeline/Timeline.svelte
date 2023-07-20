@@ -9,7 +9,7 @@
 	<div class="lg:mx-auto w-full">
 		<div class="relative">
 			<div
-				class="hidden lg:block w-1 bg-neutral-focus absolute h-full left-1/2 transform -translate-x-1/2"
+				class="hidden lg:block w-px bg-neutral-content absolute h-full left-1/2 transform -translate-x-1/2"
 			/>
 			{#each timelineItems as item, i}
 				{#if i % 2 === 0}
