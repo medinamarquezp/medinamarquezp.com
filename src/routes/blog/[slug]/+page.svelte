@@ -3,10 +3,6 @@
 	import LatestNews from '$lib/components/ui/latest-news/LatestNews.svelte';
 </script>
 
-<svelte:head>
-	<link href="https://unpkg.com/pattern.css" rel="stylesheet" />
-</svelte:head>
-
 <div
 	class="mx-8 sm:mx-16 lg:mx-60 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
 >

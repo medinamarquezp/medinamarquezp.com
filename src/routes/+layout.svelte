@@ -10,6 +10,10 @@
 	});
 </script>
 
+<svelte:head>
+	<link href="https://unpkg.com/pattern.css" rel="stylesheet" />
+</svelte:head>
+
 <div class="flex flex-col min-h-screen sm:px-16 px-2">
 	<Header />
 	<slot />
