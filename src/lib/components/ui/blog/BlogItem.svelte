@@ -5,7 +5,7 @@
 </script>
 
 <article class="relative group">
-	<a href={link} class="flex p-6 rounded-xl hover:bg-neutral">
+	<a href={link} class="flex p-6 rounded-xl bg-neutral sm:bg-transparent hover:bg-neutral">
 		<svg
 		viewBox="0 0 9 9"
 		class="hidden absolute right-full mr-6 top-2 md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block"
@@ -19,14 +19,14 @@
 	>
 	<div class="relative">
 		<h3 class="font-semibold pt-8 lg:pt-0 text-2xl">{title}</h3>
-		<div class="flex flex-row gap-4 mt-2 mb-4">
+		<div class="flex flex-row gap-4 mt-2 mb-4 items-center">
 			<div class="badge badge-lg bg-secondary">Emprendimiento</div>
-			<div class="text-base text-slate-500">
-				{' ☕️ '.repeat(3)} <span class="pl-1">(10 minutos de lectura)</span>
+			<div class="text-lg text-slate-500">
+				{' ☕️ '.repeat(3)} <span class="pl-1">(Léelo en 10 minutos)</span>
 			</div>
 		</div>
 		<div
-			class="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 dark:prose-dark line-clamp-2"
+			class="mb-4 prose prose-slate prose-a:relative prose-a:z-10 dark:prose-dark line-clamp-2"
 		>
 			<slot />
 		</div>
