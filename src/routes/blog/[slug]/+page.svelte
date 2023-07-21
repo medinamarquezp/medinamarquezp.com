@@ -25,6 +25,14 @@
 			alt="test"
 		/>
 	</div>
+	<div class="mb-10">
+		<span class="font-bold text-2xl">TL;DR</span>
+		<p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor,
+			elit ac pharetra porttitor, ligula arcu vulputate massa, at feugiat sapien
+			diam sed turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor,
+			elit ac pharetra porttitor, ligula arcu vulputate massa, at feugiat sapien
+			diam sed turpis.</p>
+	</div>
 	<div class="leading-relaxed">
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor,
@@ -85,7 +93,7 @@
 			Praesent arcu tortor, porta blandit pharetra in, cursus vitae dui.
 		</p>
 	</div>
-	<div class="flex justify-center mt-8">
+	<div class="flex justify-center mt-10">
 		<ShareOnTwitter path="https://test.es/lol" content="Lorem ipsum blandit" />
 	</div>
 </div>
