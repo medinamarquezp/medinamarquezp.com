@@ -1,8 +1,9 @@
 <script lang="ts">
 	import type { Filter } from '$lib/types';
-	import FeedHeader from '$lib/components/ui/globals/FeedHeader.svelte';
-	import Filters from '$lib/components/ui/blog/Filters.svelte';
-	import ProjectItem from '$lib/components/ui/project/ProjectItem.svelte';
+	import FeedHeader from '$lib/components/FeedHeader.svelte';
+	import Filters from '$lib/components/Filters.svelte';
+	import ProjectItem from './ProjectItem.svelte';
+	
 	let filters: Filter[] = [
 		{ label: 'fullstack', path: '/' },
 		{ label: 'buildinginpublic', path: '/' }

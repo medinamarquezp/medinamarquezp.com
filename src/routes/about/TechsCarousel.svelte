@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Tech } from "$lib/types";
+	
 	export let techs: Tech[];
 </script>
 

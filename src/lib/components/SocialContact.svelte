@@ -1,5 +1,5 @@
 <script>
-	import LinkedinFilled from '$lib/components/icons/LinkedinFilled.svelte';
+	import LinkedinFilled from './LinkedinFilled.svelte';
 	import {
 		IconAt,
 		IconBrandTwitterFilled,

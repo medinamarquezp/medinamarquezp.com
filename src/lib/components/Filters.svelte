@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Filter } from '$lib/types';
+	
 	export let filters: Filter[];
 </script>
 

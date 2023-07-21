@@ -1,8 +1,9 @@
 <script lang="ts">
 	import type { TimelineItem } from '$lib/types';
-	import BadgetList from '$lib/components/ui/skills/BadgetList.svelte';
-	import TechsCarousel from '$lib/components/ui/skills/TechsCarousel.svelte';
-	import Timeline from '$lib/components/ui/timeline/Timeline.svelte';
+	import BadgetList from './BadgetList.svelte';
+	import TechsCarousel from './TechsCarousel.svelte';
+	import Timeline from './Timeline.svelte';
+	
 	const softSkills = [
 		'Adaptavilidad al cambio',
 		'Aprendizaje continuo',

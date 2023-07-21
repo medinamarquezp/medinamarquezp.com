@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+
 	export let classList: string;
 	$: isActive = (path: string) => $page.url.pathname.includes(path);
 </script>

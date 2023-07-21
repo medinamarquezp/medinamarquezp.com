@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { IconBrandTwitterFilled } from '@tabler/icons-svelte';
+	
 	export let path: string;
 	export let content: string;
 	$: url = encodeURIComponent(path);

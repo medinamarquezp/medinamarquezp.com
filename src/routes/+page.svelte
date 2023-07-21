@@ -1,6 +1,6 @@
 <script>
-	import SocialContact from "$lib/components/ui/globals/SocialContact.svelte";
-	import LatestNews from "$lib/components/ui/latest-news/LatestNews.svelte";
+	import SocialContact from "$lib/components/SocialContact.svelte";
+	import CardsGrid from "$lib/components/CardsGrid.svelte";
 </script>
 
 <div class="mx-6 sm:mx-12 lg:mx-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in">
@@ -12,5 +12,5 @@
         <p class="mb-2 font-medium">¿Hablamos?</p>
         <SocialContact justify={false} />
     </div>
-    <LatestNews title="Novedades" />
+    <CardsGrid title="Novedades" />
 </div>

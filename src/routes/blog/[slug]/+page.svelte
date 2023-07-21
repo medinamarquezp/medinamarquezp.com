@@ -1,6 +1,6 @@
 <script>
-	import ShareOnTwitter from '$lib/components/ui/globals/ShareOnTwitter.svelte';
-	import LatestNews from '$lib/components/ui/latest-news/LatestNews.svelte';
+	import ShareOnTwitter from '$lib/components/ShareOnTwitter.svelte';
+	import CardsGrid from '$lib/components/CardsGrid.svelte';
 </script>
 
 <div
@@ -90,5 +90,5 @@
 	</div>
 </div>
 <div class="mx-6 sm:mx-12 lg:mx-24 mt-0 mb-12 text-xl">
-	<LatestNews title="🤔 También podría interesarte" />
+	<CardsGrid title="🤔 También podría interesarte" />
 </div>
