@@ -5,9 +5,9 @@
 </script>
 
 <div
-	class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8"
+	class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-12"
 >
-	<h2 class="text-xl font-medium">{title}</h2>
+	<h2 class="text-2xl font-medium">{title}</h2>
 	<CardItem
 		title="Card title!"
 		content="If a dog chews shoes whose shoes does he choose?"

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { TimelineItem } from '$lib/types';
 	import { IconBriefcase, IconSchool } from '@tabler/icons-svelte';
+	import TechsList from '$lib/components/TechsList.svelte';
 
 	export let item: TimelineItem;
 	export let direction: 'left' | 'right';
@@ -45,19 +46,7 @@
 					</div>
 					<p class="mt-2">{item.description}</p>
 					{#if item.techs.length}
-						<p class="uppercase text-sm block mb-2">
-							Tecnologías y herramientas
-						</p>
-						<div class=" text-slate-500">
-							{#each item.techs as { icon, label }}
-								<div
-									class="tooltip tooltip-primary inline-block mr-4 mt-2"
-									data-tip={label}
-								>
-									<i class="text-4xl {icon}" />
-								</div>
-							{/each}
-						</div>
+						<TechsList techs={item.techs} />
 					{/if}
 				</div>
 			</div>
