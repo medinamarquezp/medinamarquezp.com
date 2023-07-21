@@ -5,7 +5,7 @@
 <div class="mb-8">
     <a
         href="/"
-        class="flex flex-col lg:flex-row gap-6 p-8 rounded-xl bg-neutral sm:bg-transparent hover:bg-neutral transition"
+        class="flex flex-col lg:flex-row gap-6 p-10 rounded-xl bg-neutral sm:bg-transparent hover:bg-neutral transition"
     >
         <div class="flex flex-col w-full lg:w-1/2">
             <h1 class="text-4xl font-bold">
