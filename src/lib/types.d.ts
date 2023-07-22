@@ -6,7 +6,7 @@ export interface TimelineItem {
 	start: Date;
 	end: Date | null;
 	description: string;
-	techs: Tech[];
+	techs?: Tech[];
 }
 
 export interface Filter {

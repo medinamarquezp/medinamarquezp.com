@@ -2,7 +2,7 @@
 	export let badgets: string[];
 </script>
 
-<div class="badgets inline-block">
+<div class="badgets inline-block transition">
 	{#each badgets as badget}
 		<span>{badget}</span>
 	{/each}

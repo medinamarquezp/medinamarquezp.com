@@ -7,7 +7,7 @@
 
 <div class="w-full flex flex-col justify-center">
 	<div class="lg:mx-auto w-full">
-		<div class="relative">
+		<div class="relative transition">
 			<div
 				class="hidden lg:block w-px bg-neutral-content absolute h-full left-1/2 transform -translate-x-1/2"
 			/>

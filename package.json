@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@notionhq/client": "^2.2.8",
 		"@tabler/icons-svelte": "^2.25.0",
 		"tailwindcss-animated": "^1.0.1",
 		"theme-change": "^2.5.0"
