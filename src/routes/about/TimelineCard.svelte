@@ -2,22 +2,13 @@
 	import type { TimelineItem } from '$lib/types';
 	import { IconBriefcase, IconSchool } from '@tabler/icons-svelte';
 	import TechsList from '$lib/components/TechsList.svelte';
+	import { formatTimelineDate } from '$lib/utilities/dates';
 
 	export let item: TimelineItem;
 	export let direction: 'left' | 'right';
 	export let isFisrtElement: boolean;
 	$: padding = direction === 'left' ? 'lg:pr-8' : 'lg:pl-8';
 	$: justify = direction === 'left' ? 'justify-start' : 'justify-end';
-
-	function formatDate(date: Date | null) {
-		if (date) {
-			return date.toLocaleDateString('es-ES', {
-				year: 'numeric',
-				month: 'short'
-			});
-		}
-		return 'Actualmente';
-	}
 </script>
 
 <div class="mt-6 lg:mt-0 lg:mb-10">
@@ -40,12 +31,12 @@
 							<h1 class="font-semibold">{item.title}</h1>
 							<h2>{item.company}</h2>
 							<span class="text-base text-slate-500"
-								>{formatDate(item.start)} -- {formatDate(item.end)}</span
+								>{formatTimelineDate(item.start)} -- {formatTimelineDate(item.end)}</span
 							>
 						</div>
 					</div>
 					<p class="mt-2">{item.description}</p>
-					{#if item.techs.length}
+					{#if item?.techs?.length}
 						<TechsList techs={item.techs} />
 					{/if}
 				</div>

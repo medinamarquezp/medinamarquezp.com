@@ -1,14 +1,14 @@
 <script lang="ts">
+	import type { BlogItem } from "$lib/types";
 	import { IconCalendarEvent } from "@tabler/icons-svelte";
 
-	export let title: string;
-	export let date: string;
-	export let link: string;
+	export let blog: BlogItem
+
 </script>
 
 <article class="relative group">
 	<a
-		href={link}
+		href={`/blog/${blog.slug}`}
 		class="flex p-6 rounded-xl bg-neutral sm:bg-transparent hover:bg-neutral transition"
 	>
 		<div
@@ -17,22 +17,26 @@
 			<IconCalendarEvent class="text-white mt-1 ml-1" size={24} stroke={2} />
 		</div>
 		<div class="relative">
-			<h3 class="font-semibold pt-8 lg:pt-0 text-2xl">{title}</h3>
+			<h3 class="font-semibold pt-8 lg:pt-0 text-2xl">{blog.title}</h3>
 			<div class="flex flex-col sm:flex-row gap-2 mt-4 sm:mt-2 mb-4 items-start sm:items-center">
-				<div class="badge badge-lg bg-secondary">Emprendimiento</div>
+				{ #if blog.categories }
+					{#each blog.categories as category}
+						<div class="badge badge-lg bg-primary">{category}</div>
+					{/each}
+				{/if}
 				<div class="text-lg text-slate-500">
-					{' ☕️ '.repeat(3)} <span class="pl-1">(Léelo en 10 minutos)</span>
+					{"☕️".repeat(Math.ceil(blog.reading_time / 15))} <span class="pl-1">(Léelo en {blog.reading_time} minutos)</span>
 				</div>
 			</div>
 			<div
 				class="mb-4 prose prose-slate prose-a:relative prose-a:z-10 dark:prose-dark line-clamp-2"
 			>
-				<slot />
+				{blog.excerpt}
 			</div>
 			<div
 				class="absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]"
 			>
-				<div class="whitespace-nowrap text-slate-500 lg:-mt-6">{date}</div>
+				<div class="whitespace-nowrap text-slate-500 lg:-mt-6">{blog.created_at}</div>
 			</div>
 		</div>
 	</a>

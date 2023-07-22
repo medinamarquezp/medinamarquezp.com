@@ -1,9 +1,11 @@
 <script lang="ts">
+	import type { PageData } from './$types';
 	import type { Filter } from '$lib/types';
 	import FeedHeader from '$lib/components/FeedHeader.svelte';
 	import Filters from '$lib/components/Filters.svelte';
 	import BlogItem from './BlogItem.svelte';
 
+	export let data: PageData;
 	let conteinerClasses =
 		'relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]';
 	let timelineClasses =
@@ -30,17 +32,9 @@
 	<div class={conteinerClasses}>
 		<div class={timelineClasses} />
 		<div class="space-y-16">
-			<BlogItem
-				link="/blog/123"
-				date="April 24, 2023"
-				title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-			>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
-					sollicitudin mi, vel eleifend magna. Aenean vel mollis tortor, vitae
-					sagittis leo.
-				</p>
-			</BlogItem>
+			{#each data.blogs as blog}
+				<BlogItem {blog} />
+			{/each}
 		</div>
 	</div>
 </div>

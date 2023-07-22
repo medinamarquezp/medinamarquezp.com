@@ -18,3 +18,15 @@ export interface Tech {
 	icon: string;
 	label: string;
 }
+
+export interface BlogItem {
+	slug: string;
+	title: string;
+	categories: string[];
+	excerpt: string;
+	published: boolean;
+	hero: string;
+	tldr: string;
+	reading_time: number;
+	created_at: string;
+}

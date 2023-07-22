@@ -18,7 +18,7 @@ export const hardSkills = [
 	'Arquitectura de software',
 	'Desarrollo Frontend',
 	'Desarrollo Backend',
-	'Desarrollo Smart Contracts',
+	'Desarrollo de Smart Contracts',
 	'Desarrollo de aplicaciones móviles',
 	'Automatización de procesos',
 	'DevOps',

@@ -1,17 +1,23 @@
 import { env } from '$env/dynamic/private';
-import type { Tech, TimelineItem } from '$lib/types';
+import type { Tech, TimelineItem, BlogItem } from '$lib/types';
 import { notionClient } from './client';
-import { parseTechResult, parseTimelineResult } from './parsers';
+import {
+	parseTechResult,
+	parseTimelineResult,
+	parseBlogResult
+} from './parsers';
 
 class NotionBlocks {
 	private client: typeof notionClient;
 	private techs: Map<string, Tech>;
+	private blogs: BlogItem[];
 	private timeline: TimelineItem[];
 
 	constructor() {
 		this.client = notionClient;
 		this.techs = new Map();
 		this.timeline = [];
+		this.blogs = [];
 	}
 
 	async getTechs(): Promise<Map<string, Tech>> {
@@ -38,6 +44,27 @@ class NotionBlocks {
 			this.timeline.push(parseTimelineResult(item, techs))
 		);
 		return this.timeline;
+	}
+
+	async getBlogs(): Promise<BlogItem[]> {
+		if (this.blogs.length) return this.blogs;
+		const blogsDB = env.NOTION_BLOGS_DB as string;
+		const result = await this.client.queryDatabase({
+			database_id: blogsDB,
+			filter: {
+				and: [
+					{
+						property: 'published',
+						checkbox: {
+							equals: true
+						}
+					}
+				]
+			},
+			sorts: [{ property: 'published', direction: 'descending' }]
+		});
+		result.map((item: any) => this.blogs.push(parseBlogResult(item)));
+		return this.blogs;
 	}
 }
 
