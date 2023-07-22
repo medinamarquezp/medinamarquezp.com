@@ -4,7 +4,7 @@
 	export let techs: Tech[];
 </script>
 
-<div class="flex max-w-full overflow-x-auto gap-2 mt-4">
+<div class="flex max-w-full overflow-x-auto gap-2 mt-2">
 	{#each techs as { label, icon }}
 		<div
 			class="tooltip tooltip-primary p-6 my-8 bg-neutral rounded-md"

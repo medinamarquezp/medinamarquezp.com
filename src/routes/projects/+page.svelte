@@ -1,13 +1,6 @@
 <script lang="ts">
-	import type { Filter } from '$lib/types';
 	import FeedHeader from '$lib/components/FeedHeader.svelte';
-	import Filters from '$lib/components/Filters.svelte';
 	import ProjectItem from './ProjectItem.svelte';
-	
-	let filters: Filter[] = [
-		{ label: 'fullstack', path: '/' },
-		{ label: 'buildinginpublic', path: '/' }
-	];
 </script>
 
 <div
@@ -15,13 +8,14 @@
 >
 	<FeedHeader title="Proyectos" feedPath="/">
 		<svelte:fragment slot="description">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
-			sollicitudin mi, vel eleifend magna. Aenean vel mollis tortor, vitae
-			sagittis leo.
+			El rincon de las ideas locas 🤪. Un lugar donde construir, experimentar y
+			desarrollar, cuyo principal objetivo es <span
+				class="underline decoration-primary decoration-wavy"
+				>convertir problemas en soluciones</span
+			>.
 		</svelte:fragment>
-		<Filters {filters} />
 	</FeedHeader>
-	<div class="mt-10">
+	<div class="mt-20">
 		<ProjectItem />
 	</div>
 </div>

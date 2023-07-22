@@ -19,9 +19,11 @@
 >
 	<FeedHeader title="Últimas novedades" feedPath="/">
 		<svelte:fragment slot="description">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
-			sollicitudin mi, vel eleifend magna. Aenean vel mollis tortor, vitae
-			sagittis leo.
+			El rincon de las reflexiones 🤔. Un lugar donde curiosear, aprender y
+			compartir, cuyo principal objetivo es <span
+				class="underline decoration-primary decoration-wavy"
+				>plasmar pensamientos aleatorios</span
+			>.
 		</svelte:fragment>
 		<Filters {filters} />
 	</FeedHeader>

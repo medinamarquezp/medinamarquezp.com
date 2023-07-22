@@ -3,16 +3,17 @@
 	import BadgetList from './BadgetList.svelte';
 	import TechsCarousel from './TechsCarousel.svelte';
 	import Timeline from './Timeline.svelte';
-	
+
 	const softSkills = [
-		'Adaptavilidad al cambio',
 		'Aprendizaje continuo',
+		'Adaptavilidad al cambio',
 		'Atención al detalle',
-		'Capacidad de abstracción',
-		'Capacidad de autogestión',
-		'Pensamiento analítico',
-		'Pensamiento creativo',
-		'Proactividad',
+		'Resolución de problemas',
+		'Abstracción',
+		'Autogestión',
+		'Analítico',
+		'Creativo',
+		'Proactivo',
 		'Trabajo en equipo'
 	];
 	const techs = [
@@ -24,8 +25,6 @@
 		{ icon: 'devicon-jest-plain', label: 'Jest' },
 		{ icon: 'devicon-svelte-plain', label: 'Svelte' },
 		{ icon: 'devicon-tailwindcss-plain', label: 'Tailwind' },
-		{ icon: 'devicon-dart-plain', label: 'Dart' },
-		{ icon: 'devicon-flutter-plain', label: 'Flutter' },
 		{ icon: 'devicon-solidity-plain', label: 'Solidity' },
 		{ icon: 'devicon-postgresql-plain', label: 'PostgreSQL' },
 		{ icon: 'devicon-mongodb-plain', label: 'MongoDB' },
@@ -57,9 +56,10 @@
 			type: 'academic',
 			company: 'Ilerna Online',
 			brand: '/timeline_brands/ilerna.png',
-			title: 'Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)',
+			title:
+				'Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)',
 			start: new Date('2018-09-01'),
-			end: new Date('2019-06-01'),
+			end: new Date('2019/06/01'),
 			description:
 				'Este ciclo complementa a DAW y profundiza en el desarrollo de aplicaciones móviles mediante el uso de Java para Android y CSharp para Unity. Además, avanza en la programación de servicios y procesos con Java e introduce los sistemas de gestión empresarial mediante el desarrollo y configuración de diferentes ERPs como Odoo.',
 			techs: [
@@ -69,7 +69,7 @@
 				{ icon: 'devicon-androidstudio-plain', label: 'Android Studio' },
 				{ icon: 'devicon-csharp-plain', label: 'CSharp' },
 				{ icon: 'devicon-unity-original', label: 'Unity' },
-				{ icon: 'devicon-python-plain', label: 'Python' },
+				{ icon: 'devicon-python-plain', label: 'Python' }
 			]
 		},
 		{
@@ -77,8 +77,8 @@
 			company: 'Ilerna Online',
 			brand: '/timeline_brands/ilerna.png',
 			title: 'Técnico Superior en Desarrollo de Aplicaciones Web (DAW)',
-			start: new Date('2016-09-01'),
-			end: new Date('2018-06-01'),
+			start: new Date('2016/09/01'),
+			end: new Date('2018/06/01'),
 			description:
 				'En este ciclo se estudia las bases de la programación y el ciclo completo para el desarrollo de aplicaciones y servicios web: diseño, desarrollo (front y back) y puesta en producción. Se estudia, configura y trabaja con diferentes sistemas operativos virtualizados. Se profundiza en la administración y uso avanzado de bases de datos, desde consultas, hasta programación de procedimientos y scripts.',
 			techs: [
@@ -98,36 +98,48 @@
 			]
 		}
 	];
-	let skills = 'soft'
-	let timeline = 'complete'
+	let skills = 'soft';
+	let timeline = 'complete';
 </script>
 
-<div class="mx-6 sm:mx-12 lg:mx-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in">
+<div
+	class="mx-6 sm:mx-12 lg:mx-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
+>
 	<section
 		class="flex flex-col-reverse md:flex-row gap-6 items-center md:items-start"
 	>
 		<div class="w-full md:w-2/3">
-			<h1 class="text-4xl mb-2 font-bold">¿Quién soy?</h1>
+			<h1 class="text-4xl mb-2 font-bold">Sobre mí</h1>
 			<div>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor
-					gravida sapien non hendrerit. Donec a lorem odio. Nulla congue felis
-					ac ligula dictum aliquam. Ut auctor, felis id dictum vehicula, felis
-					metus luctus dui, sed egestas diam purus sed nulla. Nam at rhoncus
-					massa. Nulla facilisi. Phasellus sagittis sapien vel risus malesuada,
-					a vestibulum ipsum auctor.
+					Mi trayectoria profesional ha evolucionado muchísimo a lo largo de mi
+					carrera. Tras diplomarme en comunicación gráfica publicitaria, mi
+					pasión por la tecnología y el mundo digital me llevó a especializarme
+					en desarrollo de software, particularmente en tecnologías web y
+					multiplataforma.
 				</p>
+
 				<p>
-					Nulla porttitor massa nisl, id ornare massa cursus eu. In finibus quam
-					quis tincidunt semper. Pellentesque a magna ullamcorper, commodo dolor
-					nec, feugiat ante. Suspendisse faucibus, mi vitae dictum interdum, sem
-					libero sodales neque, id suscipit augue mauris sit amet tortor. Donec
-					id mauris dignissim, finibus ipsum vel, convallis tortor. Duis enim
-					ipsum, tristique sed consequat sed, varius in dolor. Praesent maximus
-					tortor eros, in dictum ex lacinia id. Pellentesque imperdiet quam nec
-					rhoncus vestibulum. Donec sit amet justo eu orci gravida eleifend.
-					Morbi eros arcu, porta ut varius ac, auctor vel nulla. Duis placerat
-					tincidunt ornare.
+					Cuento con más de <span
+						class="underline decoration-primary decoration-wavy"
+						>15 años de experiencia</span
+					>
+					laboral en puestos relacionados con el
+					<span class="underline decoration-primary decoration-wavy"
+						>análisis, diseño y desarrollo de software</span
+					>. He trabajado en empresas pequeñas, medianas y grandes (a algunas he
+					tenido la suerte de verlas crecer). He participado en diversos
+					proyectos, en diferentes sectores y siempre formando parte de equipos
+					multidisciplinares.
+				</p>
+
+				<p>
+					<span class="underline decoration-primary decoration-wavy"
+						>Me apasionan los retos, la formación constante y la investigación
+						(a lo que dedico gran parte de mi tiempo)</span
+					>. Actualmente las áreas de mayor interés para mí son: el desarrollo
+					software, la ciencia de datos y machine learning, RPA y automatización
+					de procesos, blockchain y gestión de activos digitales.
 				</p>
 			</div>
 		</div>
@@ -142,26 +154,38 @@
 			<h1 class="text-3xl mb-2 font-bold">¿Qué me hace diferente?</h1>
 			<div>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor
-					gravida sapien non hendrerit. Donec a lorem odio. Nulla congue felis
-					ac ligula dictum aliquam. Ut auctor, felis id dictum vehicula, felis
-					metus luctus dui, sed egestas diam purus sed nulla. Nam at rhoncus
-					massa. Nulla facilisi. Phasellus sagittis sapien vel risus malesuada,
-					a vestibulum ipsum auctor.
+					Principalmente la curiosidad y el hecho de disfrutar de mi trabajo
+					como si de un hobby se tratase. La curiosidad me ha ayudado a
+					evolucionar y crecer en mi carrera profesional. Además, me motiva a
+					explorar nuevas tecnologías y herramientas que me mantienen
+					actualizado y me ayudan a encontrar soluciones creativas e innovadoras
+					a los desafíos a los que me enfrento en mi día a día.
 				</p>
 			</div>
 		</div>
 		<div class="w-full md:w-1/2">
-			<ul class="flex flex-col md:flex-row gap-0 md:gap-4 my-4">
+			<ul class="flex flex-col md:flex-row gap-0 md:gap-4 mb-2">
 				<li>
 					<label class="label cursor-pointer justify-start">
-						<input type="radio" name="skills" class="radio" value="soft" bind:group={skills} />
+						<input
+							type="radio"
+							name="skills"
+							class="radio"
+							value="soft"
+							bind:group={skills}
+						/>
 						<span class="ml-2">Soft skills</span>
 					</label>
 				</li>
 				<li>
 					<label class="label cursor-pointer justify-start">
-						<input type="radio" name="skills" class="radio" value="hard" bind:group={skills}  />
+						<input
+							type="radio"
+							name="skills"
+							class="radio"
+							value="hard"
+							bind:group={skills}
+						/>
 						<span class="ml-2">Hard skills</span>
 					</label>
 				</li>
@@ -175,40 +199,48 @@
 				¿Dónde me manejo como pez en el agua?
 			</h1>
 			<div>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor
-				gravida sapien non hendrerit. Donec a lorem odio. Nulla congue felis ac
-				ligula dictum aliquam. Ut auctor, felis id dictum vehicula, felis metus
-				luctus dui, sed egestas diam purus sed nulla.
+				Estas son algunas de las tecnologías con las que trabajo a diario,
+				tanto profesional, como personalmente.
 			</div>
 		</div>
 		<TechsCarousel {techs} />
 	</section>
 	<section class="flex flex-col mt-16 items-start">
-		<div>
-			<h1 class="text-3xl mb-2 font-bold">¿Cuál ha sido mi trayectoria?</h1>
-			<div>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor
-				gravida sapien non hendrerit. Donec a lorem odio. Nulla congue felis ac
-				ligula dictum aliquam. Ut auctor, felis id dictum vehicula, felis metus
-				luctus dui, sed egestas diam purus sed nulla.
-			</div>
-		</div>
+		<h1 class="text-3xl mb-2 font-bold">¿Cuál ha sido mi trayectoria?</h1>
 		<ul class="flex flex-col md:flex-row gap-0 md:gap-4 my-4">
 			<li>
 				<label class="label cursor-pointer justify-start">
-					<input type="radio" name="timeline" class="radio" value="complete" bind:group={timeline} />
+					<input
+						type="radio"
+						name="timeline"
+						class="radio"
+						value="complete"
+						bind:group={timeline}
+					/>
 					<span class="ml-2">Completa</span>
 				</label>
 			</li>
 			<li>
 				<label class="label cursor-pointer justify-start">
-					<input type="radio" name="timeline" class="radio" value="academic" bind:group={timeline}  />
+					<input
+						type="radio"
+						name="timeline"
+						class="radio"
+						value="academic"
+						bind:group={timeline}
+					/>
 					<span class="ml-2">Académica</span>
 				</label>
 			</li>
 			<li>
 				<label class="label cursor-pointer justify-start">
-					<input type="radio" name="timeline" class="radio" value="professional" bind:group={timeline} />
+					<input
+						type="radio"
+						name="timeline"
+						class="radio"
+						value="professional"
+						bind:group={timeline}
+					/>
 					<span class="ml-2">Profesional</span>
 				</label>
 			</li>
