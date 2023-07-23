@@ -1,6 +1,11 @@
-<script>
-	import SocialContact from '$lib/components/SocialContact.svelte';
+<script lang="ts">
+	import type { PageData } from './$types';
+	import { blogsToCards } from '$lib/utilities/transformers';
 	import CardsGrid from '$lib/components/CardsGrid.svelte';
+	import SocialContact from '$lib/components/SocialContact.svelte';
+
+	export let data: PageData;
+	$: items = (blogsToCards(data.latest));
 </script>
 
 <div
@@ -23,5 +28,5 @@
 		<p class="mb-2 text-2xl font-medium">¿Hablamos?</p>
 		<SocialContact justify={false} />
 	</div>
-	<!-- CardsGrid title="Novedades" /-->
+	<CardsGrid title="Novedades" {items} />
 </div>

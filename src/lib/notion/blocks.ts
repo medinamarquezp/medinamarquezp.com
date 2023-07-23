@@ -10,9 +10,10 @@ import {
 class NotionBlocks {
 	private client: typeof notionClient;
 	private techs: Map<string, Tech>;
+	private timeline: TimelineItem[];
 	private blogsList: BlogItem[];
 	private blogs: Map<string, BlogItem>;
-	private timeline: TimelineItem[];
+	private latestsBlogs: BlogItem[];
 
 	constructor() {
 		this.client = notionClient;
@@ -20,6 +21,7 @@ class NotionBlocks {
 		this.timeline = [];
 		this.blogsList = [];
 		this.blogs = new Map();
+		this.latestsBlogs = [];
 	}
 
 	async getTechs(): Promise<Map<string, Tech>> {
@@ -104,6 +106,13 @@ class NotionBlocks {
 		blog.related = related;
 		this.blogs.set(slug, blog);
 		return blog;
+	}
+
+	async getLatestsBlogs(): Promise<BlogItem[]> {
+		if (this.latestsBlogs.length) return this.latestsBlogs;
+		const blogs = await this.getBlogsList();
+		this.latestsBlogs = blogs.slice(0, 3);
+		return this.latestsBlogs;
 	}
 }
 

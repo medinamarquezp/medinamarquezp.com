@@ -1,8 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import type { Filter } from '$lib/types';
 	import FeedHeader from '$lib/components/FeedHeader.svelte';
-	import Filters from '$lib/components/Filters.svelte';
 	import BlogItem from './BlogItem.svelte';
 
 	export let data: PageData;
@@ -10,10 +8,6 @@
 		'relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]';
 	let timelineClasses =
 		'hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[2.25rem] w-px bg-neutral-content sm:block';
-	let filters: Filter[] = [
-		{ label: 'emprendimiento', path: '/' },
-		{ label: 'desarrollo', path: '/' }
-	];
 </script>
 
 <div
@@ -27,7 +21,7 @@
 				>plasmar pensamientos aleatorios</span
 			>.
 		</svelte:fragment>
-		<Filters {filters} />
+		<!-- TODO: Blog filters -->
 	</FeedHeader>
 	<div class={conteinerClasses}>
 		<div class={timelineClasses} />

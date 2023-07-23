@@ -1,22 +1,12 @@
 <script lang="ts">
-	import type { Card } from '$lib/types';
 	import type { PageData } from './$types';
 	import CardsGrid from '$lib/components/CardsGrid.svelte';
 	import ShareOnTwitter from '$lib/components/ShareOnTwitter.svelte';
+	import { blogsToCards } from '$lib/utilities/transformers';
 
 	export let data: PageData;
-
 	$: blog = data.blog;
-	$: items = (
-		blog.related
-			? blog.related.map(({ title, slug, content, created_at }) => ({
-					title,
-					content: content || '',
-					path: `/blog/${slug}`,
-					date: created_at
-			  }))
-			: []
-	) as Card[];
+	$: items = (blogsToCards(blog.related || []));
 </script>
 
 <div
@@ -56,7 +46,7 @@
 			</p>
 		</div>
 	{/if}
-	<div class="leading-relaxed">
+	<div class="blog leading-relaxed">
 		{@html blog.content}
 	</div>
 	<div class="flex justify-center mt-10">

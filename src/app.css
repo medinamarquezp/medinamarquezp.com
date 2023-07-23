@@ -11,6 +11,34 @@ p:last-child {
 	@apply mb-0;
 }
 
+.blog h1 {
+	@apply text-4xl font-bold;
+}
+
+.blog h2 {
+	@apply text-2xl font-bold;
+}
+
+.blog h3 {
+	@apply text-xl font-bold;
+}
+
+.blog strong {
+	@apply font-bold;
+}
+
+.blog ol {
+	@apply list-decimal list-inside my-4;
+}
+
+.blog ul {
+	@apply list-disc list-inside my-4;
+}
+
+.blog img {
+	@apply rounded-xl;
+}
+
 ::-webkit-scrollbar {
 	height: 4px;
 	width: 5px;

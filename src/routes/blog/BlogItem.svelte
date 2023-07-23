@@ -21,7 +21,7 @@
 			<div class="flex flex-col sm:flex-row gap-2 mt-4 sm:mt-2 mb-4 items-start sm:items-center">
 				{ #if blog.categories }
 					{#each blog.categories as category}
-						<div class="badge badge-lg bg-primary">{category}</div>
+						<div class="badge badge-lg bg-secondary">{category}</div>
 					{/each}
 				{/if}
 				<div class="text-lg text-slate-500">
