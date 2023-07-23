@@ -23,5 +23,5 @@
 		<p class="mb-2 text-2xl font-medium">¿Hablamos?</p>
 		<SocialContact justify={false} />
 	</div>
-	<CardsGrid title="Novedades" />
+	<!-- CardsGrid title="Novedades" /-->
 </div>

@@ -1,13 +1,13 @@
-<script>
-    export let title = ''
-    export let content = ''
-	export let href = '/'
+<script lang="ts">
+	import type { Card } from '$lib/types';
+    export let item: Card;
+	let { title, date, path, content } = item;
 </script>
 
-<a {href} class="card bg-neutral transition hover-scale hover:shadow-lg">
+<a href={path} class="card bg-neutral transition hover-scale hover:shadow-lg">
 	<div class="card-body">
 		<h1 class="card-title">{title}</h1>
-		<span class="text-base text-slate-500 -mt-2">24 de abril de 2023</span>
+		<span class="text-base text-slate-500 -mt-2">{date}</span>
 		<p>{content}</p>
 	</div>
 </a>

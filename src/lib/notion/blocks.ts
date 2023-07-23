@@ -1,5 +1,5 @@
 import { env } from '$env/dynamic/private';
-import type { Tech, TimelineItem, BlogItem } from '$lib/types';
+import type { Tech, TimelineItem, BlogItem, BlogProps } from '$lib/types';
 import { notionClient } from './client';
 import {
 	parseTechResult,
@@ -10,14 +10,16 @@ import {
 class NotionBlocks {
 	private client: typeof notionClient;
 	private techs: Map<string, Tech>;
-	private blogs: BlogItem[];
+	private blogsList: BlogItem[];
+	private blogs: Map<string, BlogItem>;
 	private timeline: TimelineItem[];
 
 	constructor() {
 		this.client = notionClient;
 		this.techs = new Map();
 		this.timeline = [];
-		this.blogs = [];
+		this.blogsList = [];
+		this.blogs = new Map();
 	}
 
 	async getTechs(): Promise<Map<string, Tech>> {
@@ -45,10 +47,9 @@ class NotionBlocks {
 		);
 		return this.timeline;
 	}
-
-	async getBlogs(): Promise<BlogItem[]> {
-		if (this.blogs.length) return this.blogs;
+	async getBlogs(props?: BlogProps): Promise<BlogItem[]> {
 		const blogsDB = env.NOTION_BLOGS_DB as string;
+		const { slug, categories } = props || {};
 		const result = await this.client.queryDatabase({
 			database_id: blogsDB,
 			filter: {
@@ -58,13 +59,51 @@ class NotionBlocks {
 						checkbox: {
 							equals: true
 						}
-					}
+					},
+					...(slug ? [{ property: 'slug', rich_text: { equals: slug } }] : []),
+					...(categories?.length
+						? [
+								{
+									or: categories.map((category) => ({
+										property: 'categories',
+										multi_select: { contains: category }
+									}))
+								}
+						  ]
+						: [])
 				]
 			},
 			sorts: [{ property: 'published', direction: 'descending' }]
 		});
-		result.map((item: any) => this.blogs.push(parseBlogResult(item)));
-		return this.blogs;
+
+		return result.map((item: any) => parseBlogResult(item));
+	}
+
+	async getBlogsList(): Promise<BlogItem[]> {
+		if (this.blogsList.length) return this.blogsList;
+		const result = await this.getBlogs();
+		result.map((item) => this.blogsList.push(item));
+		return this.blogsList;
+	}
+
+	async getBlog(slug: string): Promise<BlogItem | undefined> {
+		if (this.blogs.has(slug)) return this.blogs.get(slug);
+		const blogs = await this.getBlogs({ slug });
+		if (!blogs.length) return undefined;
+		const blog = blogs[0];
+		const [page, relatedBlogs] = await Promise.all([
+			this.client.getPage(blog.id),
+			this.getBlogs({
+				categories: blog.categories
+			})
+		]);
+		const related = relatedBlogs
+			.filter((item) => item.slug !== blog.slug)
+			.slice(0, 3);
+		blog.content = page;
+		blog.related = related;
+		this.blogs.set(slug, blog);
+		return blog;
 	}
 }
 

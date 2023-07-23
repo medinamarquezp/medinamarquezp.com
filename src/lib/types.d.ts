@@ -19,7 +19,15 @@ export interface Tech {
 	label: string;
 }
 
+export interface Card {
+	title: string;
+	content: string;
+	path: string;
+	date: string;
+}
+
 export interface BlogItem {
+	id: string;
 	slug: string;
 	title: string;
 	categories: string[];
@@ -29,4 +37,11 @@ export interface BlogItem {
 	tldr: string;
 	reading_time: number;
 	created_at: string;
+	content?: string;
+	related?: BlogItem[];
+}
+
+export interface BlogProps {
+	slug?: string;
+	categories?: string[];
 }

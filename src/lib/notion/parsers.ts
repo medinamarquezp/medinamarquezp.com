@@ -24,6 +24,7 @@ export const parseTechResult = (item: any) => {
 
 export const parseBlogResult = (item: any) => {
 	return {
+		id: item.id,
 		slug: item.properties.slug.rich_text[0].plain_text,
 		title: item.properties.title.title[0].plain_text,
 		categories: item.properties.categories.multi_select.map(
