@@ -14,7 +14,7 @@
 	<h1
 		class="text-5xl sm:text-7xl !leading-snug tracking-tight font-bold bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text"
 	>
-		hola! soy Pedro,
+		¡Hola, soy Pedro!
 	</h1>
 	<p class="mt-2 text-2xl font-normal leading-normal">
 		<span class="underline decoration-primary decoration-wavy">
