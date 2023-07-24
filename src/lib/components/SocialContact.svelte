@@ -10,7 +10,7 @@
 </script>
 
 <nav>
-	<ul class:justify-center={justify} class="flex flex-row align-top gap-5 sm:justify-start">
+	<ul class:justify-center={justify} class="flex flex-row align-top gap-5 md:justify-start">
 		<li>
 			<a href="mailto:medinamarquezp@gmail.com" target="_blank"
 				><IconAt class="hover-scale" {size} stroke={3} />
