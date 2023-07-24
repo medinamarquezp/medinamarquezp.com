@@ -19,12 +19,12 @@
 		</svelte:fragment>
 	</FeedHeader>
 	<div class="mt-20">
-		{ #if data.projects }
+		{ #if data.projects.length }
 			{#each data.projects as project}
 				<ProjectItem {project} />
 			{/each}
 		{ :else }
-			<p class="text-center text-slate-500 text-2xl">No hay proyectos que mostrar</p>
+			<p class="text-center text-slate-500 text-2xl">No hay proyectos para mostrar</p>
 		{/if }
 	</div>
 </div>

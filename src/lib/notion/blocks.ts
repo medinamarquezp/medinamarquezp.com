@@ -129,7 +129,17 @@ class NotionBlocks {
 		const projectsDB = env.NOTION_PROJECTS_DB as string;
 		const result = await this.client.queryDatabase({
 			database_id: projectsDB,
-			sorts: [{ timestamp: 'created_time', direction: 'descending' }]
+			sorts: [{ timestamp: 'created_time', direction: 'descending' }],
+			filter: {
+				and: [
+					{
+						property: 'published',
+						checkbox: {
+							equals: true
+						}
+					}
+				]
+			}
 		});
 		const techs = await this.getTechs();
 		result.map((item: any) =>
