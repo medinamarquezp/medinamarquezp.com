@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { navigating } from '$app/stores';
 	import { IconMenuDeep } from '@tabler/icons-svelte';
 	import MainNav from './MainNav.svelte';
 	import DarkmodeSwitcher from './DarkmodeSwitcher.svelte';
@@ -6,9 +7,13 @@
 
 <div class="navbar">
 	<div class="navbar-start">
-		<a href="/" title="Inicio">
-			<img class="w-12 h-12" src="/medinamarquezp.gif" alt="medinamarquezp" />
-		</a>
+		{#if $navigating}
+			<span class="loading loading-spinner loading-lg text-secondary" />
+		{:else}
+			<a href="/" title="Inicio">
+				<img class="w-12 h-12" src="/medinamarquezp.gif" alt="medinamarquezp" />
+			</a>
+		{/if}
 	</div>
 	<div class="navbar-center hidden sm:flex">
 		<MainNav classList="menu menu-lg menu-horizontal gap-1" />
