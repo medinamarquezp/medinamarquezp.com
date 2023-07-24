@@ -42,3 +42,22 @@ export const parseBlogResult = (item: any) => {
 		})
 	};
 };
+
+export const parseProjectResult = (item: any, techs: Map<string, Tech>) => {
+	return {
+		title: item.properties.title.title[0].plain_text,
+		categories: item.properties.categories.multi_select.map(
+			(category: any) => category.name
+		),
+		description: item.properties.description.rich_text[0].plain_text,
+		images: item.properties.images.files.map((image: any) => image.file.url),
+		techs: item.properties.techs.relation.map((tech: any) =>
+			techs.get(tech.id)
+		),
+		created_at: formatDate(new Date(item.created_time), {
+			month: 'long',
+			day: 'numeric',
+			year: 'numeric'
+		})
+	};
+};

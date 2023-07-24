@@ -1,10 +1,17 @@
 import { env } from '$env/dynamic/private';
-import type { Tech, TimelineItem, BlogItem, BlogProps } from '$lib/types';
+import type {
+	Tech,
+	TimelineItem,
+	BlogItem,
+	BlogProps,
+	ProjectItem
+} from '$lib/types';
 import { notionClient } from './client';
 import {
 	parseTechResult,
 	parseTimelineResult,
-	parseBlogResult
+	parseBlogResult,
+	parseProjectResult
 } from './parsers';
 
 class NotionBlocks {
@@ -14,6 +21,7 @@ class NotionBlocks {
 	private blogsList: BlogItem[];
 	private blogs: Map<string, BlogItem>;
 	private latestsBlogs: BlogItem[];
+	private projects: ProjectItem[];
 
 	constructor() {
 		this.client = notionClient;
@@ -22,6 +30,7 @@ class NotionBlocks {
 		this.blogsList = [];
 		this.blogs = new Map();
 		this.latestsBlogs = [];
+		this.projects = [];
 	}
 
 	async getTechs(): Promise<Map<string, Tech>> {
@@ -75,7 +84,7 @@ class NotionBlocks {
 						: [])
 				]
 			},
-			sorts: [{ property: 'published', direction: 'descending' }]
+			sorts: [{ timestamp: 'created_time', direction: 'descending' }]
 		});
 
 		return result.map((item: any) => parseBlogResult(item));
@@ -113,6 +122,20 @@ class NotionBlocks {
 		const blogs = await this.getBlogsList();
 		this.latestsBlogs = blogs.slice(0, 3);
 		return this.latestsBlogs;
+	}
+
+	async getProjects(): Promise<ProjectItem[]> {
+		if (this.projects.length) return this.projects;
+		const projectsDB = env.NOTION_PROJECTS_DB as string;
+		const result = await this.client.queryDatabase({
+			database_id: projectsDB,
+			sorts: [{ timestamp: 'created_time', direction: 'descending' }]
+		});
+		const techs = await this.getTechs();
+		result.map((item: any) =>
+			this.projects.push(parseProjectResult(item, techs))
+		);
+		return this.projects;
 	}
 }
 

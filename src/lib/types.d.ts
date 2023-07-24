@@ -45,3 +45,12 @@ export interface BlogProps {
 	slug?: string;
 	categories?: string[];
 }
+
+export interface ProjectItem {
+	title: string;
+	categories: string[];
+	description: string;
+	images: string[];
+	techs: Tech[];
+	created_at: string;
+}

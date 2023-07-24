@@ -1,6 +1,9 @@
 <script lang="ts">
+	import type { PageData } from './$types';
 	import FeedHeader from '$lib/components/FeedHeader.svelte';
 	import ProjectItem from './ProjectItem.svelte';
+
+	export let data: PageData;
 </script>
 
 <div
@@ -16,6 +19,12 @@
 		</svelte:fragment>
 	</FeedHeader>
 	<div class="mt-20">
-		<ProjectItem />
+		{ #if data.projects }
+			{#each data.projects as project}
+				<ProjectItem {project} />
+			{/each}
+		{ :else }
+			<p class="text-center text-2xl">No hay proyectos que mostrar</p>
+		{/if }
 	</div>
 </div>
