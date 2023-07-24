@@ -6,7 +6,7 @@
 	<h1 class="text-6xl font-bold mb-4">🥲 {$page.status}</h1>
 	<h2 class="text-3xl font-bold mb-4">
 		{#if $page.status === 404}
-			¡Ups! Parece que el contenido ya no está disponible.
+			¡Ups! Parece que el contenido no está disponible.
 		{/if}
 		{#if $page.status === 500}
 			¡Ups! parce que algo no ha ido bien.
