@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	<div class="flex justify-center w-full pt-4 gap-2">
-		{#if images.length}
+		{#if images.length > 1}
 			{#each images as _, i}
 				<a
 					href="#item{i + 1}"
