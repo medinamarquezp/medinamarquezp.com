@@ -36,10 +36,11 @@ class NotionBlocks {
 	async getTechs(): Promise<Map<string, Tech>> {
 		if (this.techs.size) return this.techs;
 		const techsDB = env.NOTION_TECHS_DB as string;
-		const result = await this.client.queryDatabase({
+		const results = await this.client.queryDatabase({
 			database_id: techsDB
 		});
-		result.map((item: any) => {
+		if (!results.length) return new Map();
+		results.map((item: any) => {
 			this.techs.set(item.id, parseTechResult(item));
 		});
 		return this.techs;
@@ -48,20 +49,22 @@ class NotionBlocks {
 	async getTimeline(): Promise<TimelineItem[]> {
 		if (this.timeline.length) return this.timeline;
 		const timelineDB = env.NOTION_TIMELINE_DB as string;
-		const result = await this.client.queryDatabase({
+		const results = await this.client.queryDatabase({
 			database_id: timelineDB,
 			sorts: [{ property: 'start', direction: 'descending' }]
 		});
+		if (!results.length) return [];
 		const techs = await this.getTechs();
-		result.map((item: any) =>
-			this.timeline.push(parseTimelineResult(item, techs))
-		);
+		for (const result of results) {
+			const parsedResult = await parseTimelineResult(result, techs);
+			this.timeline.push(parsedResult);
+		}
 		return this.timeline;
 	}
 	async getBlogs(props?: BlogProps): Promise<BlogItem[]> {
 		const blogsDB = env.NOTION_BLOGS_DB as string;
 		const { slug, categories } = props || {};
-		const result = await this.client.queryDatabase({
+		const results = await this.client.queryDatabase({
 			database_id: blogsDB,
 			filter: {
 				and: [
@@ -86,8 +89,13 @@ class NotionBlocks {
 			},
 			sorts: [{ timestamp: 'created_time', direction: 'descending' }]
 		});
-
-		return result.map((item: any) => parseBlogResult(item));
+		if (!results.length) return [];
+		const parsedResults = [];
+		for (const result of results) {
+			const parsedResult = await parseBlogResult(result);
+			parsedResults.push(parsedResult);
+		}
+		return parsedResults;
 	}
 
 	async getBlogsList(): Promise<BlogItem[]> {
@@ -127,7 +135,7 @@ class NotionBlocks {
 	async getProjects(): Promise<ProjectItem[]> {
 		if (this.projects.length) return this.projects;
 		const projectsDB = env.NOTION_PROJECTS_DB as string;
-		const result = await this.client.queryDatabase({
+		const results = await this.client.queryDatabase({
 			database_id: projectsDB,
 			sorts: [{ timestamp: 'created_time', direction: 'descending' }],
 			filter: {
@@ -141,10 +149,12 @@ class NotionBlocks {
 				]
 			}
 		});
+		if (!results.length) return [];
 		const techs = await this.getTechs();
-		result.map((item: any) =>
-			this.projects.push(parseProjectResult(item, techs))
-		);
+		for (const result of results) {
+			const parsedResult = await parseProjectResult(result, techs);
+			this.projects.push(parsedResult);
+		}
 		return this.projects;
 	}
 }

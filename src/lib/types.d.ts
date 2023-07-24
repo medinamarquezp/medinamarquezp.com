@@ -33,7 +33,7 @@ export interface BlogItem {
 	categories: string[];
 	excerpt: string;
 	published: boolean;
-	hero: string;
+	hero?: string;
 	tldr: string;
 	reading_time: number;
 	created_at: string;
