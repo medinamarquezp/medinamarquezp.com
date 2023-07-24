@@ -26,9 +26,15 @@
 	<div class={conteinerClasses}>
 		<div class={timelineClasses} />
 		<div class="space-y-16">
-			{#each data.blogs as blog}
-				<BlogItem {blog} />
-			{/each}
+			{#if data.blogs.length}
+				{#each data.blogs as blog}
+					<BlogItem {blog} />
+				{/each}
+			{:else}
+				<p class="text-center text-slate-500 text-2xl">
+					No hay entradas en el blog
+				</p>
+			{/if}
 		</div>
 	</div>
 </div>

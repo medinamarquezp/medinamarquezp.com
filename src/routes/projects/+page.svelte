@@ -24,7 +24,7 @@
 				<ProjectItem {project} />
 			{/each}
 		{ :else }
-			<p class="text-center text-2xl">No hay proyectos que mostrar</p>
+			<p class="text-center text-slate-500 text-2xl">No hay proyectos que mostrar</p>
 		{/if }
 	</div>
 </div>
