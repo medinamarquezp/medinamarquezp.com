@@ -22,7 +22,7 @@
 					<div class="flex flex-row">
 						{#if item.brand}
 							<img
-								class="hidden sm:inline-block w-16 h-16 border-neutral-focus mr-2 border-4 rounded-full"
+								class="hidden sm:inline-block w-16 h-16 object-cover border-neutral-focus mr-2 border-4 rounded-full"
 								src={item.brand}
 								alt={item.company}
 							/>
@@ -31,6 +31,7 @@
 							<h1 class="font-semibold">{item.title}</h1>
 							<h2>{item.company}</h2>
 							<span class="text-base text-slate-500"
+		
 								>{formatTimelineDate(item.start)} -- {formatTimelineDate(item.end)}</span
 							>
 						</div>

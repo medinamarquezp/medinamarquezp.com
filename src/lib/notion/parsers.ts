@@ -10,7 +10,9 @@ const processFiles = async (files: string | string[]) => {
 		const url = await uploadFile(file, fileName);
 		processedFiles.push(url || file);
 	}
-	return processedFiles.length === 1 ? processedFiles[0] : processedFiles;
+	return processedFiles.length === 1 && !Array.isArray(files)
+		? processedFiles[0]
+		: processedFiles;
 };
 
 export const parseTimelineResult = async (
@@ -24,8 +26,8 @@ export const parseTimelineResult = async (
 		company: item.properties.company.rich_text[0].plain_text,
 		brand,
 		start: new Date(item.properties.start.date.start),
-		end: item.properties.end?.date?.end
-			? new Date(item.properties.end?.date?.end)
+		end: item.properties.end?.date?.start
+			? new Date(item.properties.end?.date?.start)
 			: null,
 		type: item.properties.type.select.name,
 		techs: item.properties.techs.relation.map((tech: any) => techs.get(tech.id))
@@ -76,6 +78,7 @@ export const parseProjectResult = async (
 		categories: item.properties.categories.multi_select.map(
 			(category: any) => category.name
 		),
+		phase: item.properties.phase.status.name,
 		description: item.properties.description.rich_text[0].plain_text,
 		images,
 		techs: item.properties.techs.relation.map((tech: any) =>

@@ -39,6 +39,14 @@ p:last-child {
 	@apply rounded-xl;
 }
 
+.blog a {
+	@apply text-primary;
+}
+
+.blog a:hover {
+	@apply text-primary-focus;
+}
+
 ::-webkit-scrollbar {
 	height: 4px;
 	width: 5px;

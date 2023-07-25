@@ -2,6 +2,7 @@
 	"name": "medinamarquezp-weblog",
 	"version": "0.0.1",
 	"private": false,
+	"license": "UNLICENSED",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",

@@ -49,6 +49,7 @@ export interface BlogProps {
 export interface ProjectItem {
 	title: string;
 	categories: string[];
+	phase: string;
 	description: string;
 	images: string[];
 	techs: Tech[];
