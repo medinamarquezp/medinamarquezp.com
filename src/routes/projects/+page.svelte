@@ -1,10 +1,16 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import SeoTags from '$lib/components/SeoTags.svelte';
 	import FeedHeader from '$lib/components/FeedHeader.svelte';
 	import ProjectItem from './ProjectItem.svelte';
 
 	export let data: PageData;
 </script>
+
+<SeoTags
+	title="Proyectos"
+	description="El rincon de las ideas locas 🤪. Un lugar donde construir, experimentar y desarrollar, cuyo principal objetivo es convertir problemas en soluciones"
+/>
 
 <div
 	class="mx-6 sm:mx-12 lg:mx-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"

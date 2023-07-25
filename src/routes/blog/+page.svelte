@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import FeedHeader from '$lib/components/FeedHeader.svelte';
+	import SeoTags from '$lib/components/SeoTags.svelte';
 	import BlogItem from './BlogItem.svelte';
 
 	export let data: PageData;
@@ -9,6 +10,11 @@
 	let timelineClasses =
 		'hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[2.25rem] w-px bg-neutral-content sm:block';
 </script>
+
+<SeoTags
+	title="Blog"
+	description="El rincon de las reflexiones 🤔. Un lugar donde curiosear, aprender y compartir, cuyo principal objetivo es plasmar pensamientos aleatorios."
+/>
 
 <div
 	class="mx-6 sm:mx-12 lg:mx-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"

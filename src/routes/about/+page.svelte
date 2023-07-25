@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import SeoTags from '$lib/components/SeoTags.svelte';
 	import { techs, softSkills, hardSkills } from '$lib/contents/about';
 	import BadgetList from './BadgetList.svelte';
 	import TechsCarousel from './TechsCarousel.svelte';
@@ -15,6 +16,12 @@
 			? data.timeline
 			: data.timeline.filter((item) => item.type === timeline);
 </script>
+
+<SeoTags
+	title="Sobre mí"
+	description="Diseñador y desarrollador de software curioso, creativo e inquieto. Tras diplomarme en comunicación gráfica publicitaria, mi pasión por la tecnología y el mundo digital me llevó a especializarme en desarrollo de software, particularmente en tecnologías web y multiplataforma."
+	image="/me.jpg"
+/>
 
 <div
 	class="mx-6 sm:mx-12 lg:mx-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
@@ -59,8 +66,8 @@
 		</div>
 		<img
 			class="mask mask-squircle w-80"
-			src="https://daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.jpg"
-			alt=""
+			src="/me.jpg"
+			alt="Pedro Medina Márquez"
 		/>
 	</section>
 	<section class="flex flex-col md:flex-row gap-6 mt-16 items-start">

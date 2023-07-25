@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import SeoTags from '$lib/components/SeoTags.svelte';
 	import CardsGrid from '$lib/components/CardsGrid.svelte';
 	import ShareOnTwitter from '$lib/components/ShareOnTwitter.svelte';
 	import { blogsToCards } from '$lib/utilities/transformers';
@@ -8,6 +9,13 @@
 	$: blog = data.blog;
 	$: items = (blogsToCards(blog.related || []));
 </script>
+
+<SeoTags
+	title={blog.title}
+	description={blog.tldr}
+	image={blog.hero}
+	keywords={blog.categories.join(', ')}
+/>
 
 <div
 	class="mx-8 sm:mx-16 lg:mx-60 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
