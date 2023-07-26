@@ -1,6 +1,6 @@
 export const softSkills = [
 	'Aprendizaje continuo',
-	'Adaptavilidad al cambio',
+	'Adaptabilidad al cambio',
 	'Atención al detalle',
 	'Resolución de problemas',
 	'Abstracción',

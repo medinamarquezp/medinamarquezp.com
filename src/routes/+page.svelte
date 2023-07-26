@@ -21,11 +21,11 @@
 		<span class="underline decoration-primary decoration-wavy">
 			Diseñador y desarrollador de software curioso, creativo e inquieto.</span
 		>
-		Disfruto creando productos robustos, escalables y resilientes y por el
-		camino me entretengo dando vida a todas las ideas locas 🤪 que se me pasan
+		Disfruto creando productos robustos, escalables y resilientes y, por el
+		camino, me entretengo dando vida a todas las ideas locas 🤪 que se me pasan
 		por la cabeza.
 		<span class="underline decoration-primary decoration-wavy"
-			>Ocasionalmente acepto colaboraciones en proyectos como freelance</span
+			>Ocasionalmente, acepto colaboraciones en proyectos como freelance</span
 		> si estos me resultan interesantes y retadores.
 	</p>
 	<div class="mt-6">

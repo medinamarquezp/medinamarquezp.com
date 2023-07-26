@@ -57,7 +57,7 @@
 					<span class="underline decoration-primary decoration-wavy"
 						>Me apasionan los retos, la formación constante y la investigación
 						(a lo que dedico gran parte de mi tiempo)</span
-					>. Actualmente las áreas de mayor interés para mí son: el desarrollo
+					>. Actualmente, las áreas de mayor interés para mí son: el desarrollo
 					software, la ciencia de datos y machine learning, RPA y automatización
 					de procesos, blockchain y gestión de activos digitales.
 				</p>
@@ -74,7 +74,7 @@
 			<h1 class="text-3xl mb-2 font-bold">¿Qué me hace diferente?</h1>
 			<div>
 				<p>
-					Principalmente la curiosidad y el hecho de disfrutar de mi trabajo
+					Principalmente, la curiosidad y el hecho de disfrutar de mi trabajo
 					como si de un hobby se tratase. La curiosidad me ha ayudado a
 					evolucionar y crecer en mi carrera profesional. Además, me motiva a
 					explorar nuevas tecnologías y herramientas que me mantienen
@@ -120,7 +120,7 @@
 			</h1>
 			<div>
 				Estas son algunas de las tecnologías con las que trabajo a diario, tanto
-				profesional, como personalmente:
+				profesional como personalmente:
 			</div>
 		</div>
 		<TechsCarousel {techs} />
