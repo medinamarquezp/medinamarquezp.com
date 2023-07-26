@@ -3,7 +3,7 @@
 	import { IconBrandTwitterFilled } from '@tabler/icons-svelte';
 	export let path: string;
 	export let content: string;
-	$: url = encodeURIComponent(`${env.PUBLIC_SITE_URL}/${path}`);
+	$: url = encodeURIComponent(`${env.PUBLIC_SITE_URL}/blog/${path}`);
 	$: text = encodeURIComponent(`"${content}" por @medinamarquezp`);
 </script>
 
