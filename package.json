@@ -1,5 +1,6 @@
 {
 	"name": "medinamarquezp-weblog",
+	"description": "Weblog personal",
 	"version": "1.0.0",
 	"private": false,
 	"license": "MIT",
