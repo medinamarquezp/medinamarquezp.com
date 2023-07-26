@@ -9,7 +9,7 @@
 
 <SeoTags
 	title="Proyectos"
-	description="El rincon de las ideas locas 🤪. Un lugar donde construir, experimentar y desarrollar, cuyo principal objetivo es convertir problemas en soluciones"
+	description="El rincón de las ideas locas 🤪. Un lugar donde construir, experimentar y desarrollar, cuyo principal objetivo es convertir problemas en soluciones"
 />
 
 <div
@@ -17,7 +17,7 @@
 >
 	<FeedHeader title="Proyectos">
 		<svelte:fragment slot="description">
-			El rincon de las ideas locas 🤪. Un lugar donde construir, experimentar y
+			El rincón de las ideas locas 🤪. Un lugar donde construir, experimentar y
 			desarrollar, cuyo principal objetivo es <span
 				class="underline decoration-primary decoration-wavy"
 				>convertir problemas en soluciones</span

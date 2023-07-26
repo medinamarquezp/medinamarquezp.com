@@ -9,7 +9,7 @@
 	<div class="flex flex-row gap-3 items-baseline">
 		<h1 class="text-4xl font-bold">{title}</h1>
 		{#if feedPath}
-			<a href={feedPath} title="Blog RSS">
+			<a href={feedPath} title="Blog RSS" target="_blank">
 				<IconRss class="hover-scale" size={28} stroke={4} />
 			</a>
 		{/if}

@@ -37,6 +37,7 @@ export interface BlogItem {
 	tldr: string;
 	reading_time: number;
 	created_at: string;
+	created_at_timestamp: number;
 	content?: string;
 	related?: BlogItem[];
 }

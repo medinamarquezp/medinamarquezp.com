@@ -13,15 +13,15 @@
 
 <SeoTags
 	title="Blog"
-	description="El rincon de las reflexiones 🤔. Un lugar donde curiosear, aprender y compartir, cuyo principal objetivo es plasmar pensamientos aleatorios"
+	description="El rincón de las reflexiones 🤔. Un lugar donde curiosear, aprender y compartir, cuyo principal objetivo es plasmar pensamientos aleatorios"
 />
 
 <div
 	class="mx-6 sm:mx-12 lg:mx-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
 >
-	<FeedHeader title="Últimas novedades" feedPath="/">
+	<FeedHeader title="Últimas novedades" feedPath="/rss.xml">
 		<svelte:fragment slot="description">
-			El rincon de las reflexiones 🤔. Un lugar donde curiosear, aprender y
+			El rincón de las reflexiones 🤔. Un lugar donde curiosear, aprender y
 			compartir, cuyo principal objetivo es <span
 				class="underline decoration-primary decoration-wavy"
 				>plasmar pensamientos aleatorios</span
