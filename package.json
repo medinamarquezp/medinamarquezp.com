@@ -1,8 +1,8 @@
 {
 	"name": "medinamarquezp-weblog",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"private": false,
-	"license": "UNLICENSED",
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
