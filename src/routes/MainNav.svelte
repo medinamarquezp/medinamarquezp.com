@@ -4,7 +4,7 @@
 	$: isActive = (path: string) => $page.url.pathname.includes(path);
 </script>
 
-<ul class={classList}>
+<ul id="main-nav" tabindex="-1" class={classList}>
 	<li>
 		<a
 			class:bg-neutral={isActive('about')}

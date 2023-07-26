@@ -19,7 +19,7 @@
 />
 
 <div
-	class="container px-8 sm:px-16 lg:px-60 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
+	class="container mx-auto px-8 sm:px-16 lg:px-60 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
 >
 	<span class="text-slate-500">{blog.created_at}</span>
 	<h1 class="text-4xl font-bold">

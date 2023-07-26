@@ -13,7 +13,7 @@
 
 <div class="container-content">
 	<h1
-		class="text-5xl sm:text-7xl !leading-snug tracking-tight font-bold bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text"
+		class="mt-5 text-5xl sm:text-7xl !leading-snug tracking-tight font-bold bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text"
 	>
 		¡Hola, soy Pedro!
 	</h1>

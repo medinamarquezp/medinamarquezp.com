@@ -34,5 +34,5 @@ p:last-child {
 }
 
 .container-content {
-	@apply container mx-auto px-6 sm:px-12 lg:px-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in;
+	@apply container mx-auto px-4 sm:px-12 lg:px-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in;
 }

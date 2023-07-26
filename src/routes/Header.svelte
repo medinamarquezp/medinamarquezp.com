@@ -20,13 +20,13 @@
 	</div>
 	<div class="navbar-end">
 		<DarkmodeSwitcher />
-		<details class="dropdown dropdown-end">
-			<summary class="btn btn-ghost hover-scale hover:bg-transparent sm:hidden">
+		<div class="dropdown dropdown-end">
+			<label tabindex="-1" for="main-nav" class="btn btn-ghost hover-scale hover:bg-transparent sm:hidden">
 				<IconMenuDeep size={32} stroke={3} />
-			</summary>
+			</label>
 			<MainNav
 				classList="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
 			/>
-		</details>
+		</div>
 	</div>
 </div>
