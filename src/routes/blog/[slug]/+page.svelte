@@ -25,7 +25,7 @@
 	<h1 class="text-4xl font-bold">
 		{blog.title}
 	</h1>
-	<div class="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-5 mb-4 items-center">
+	<div class="flex flex-col sm:flex-row gap-1 mt-5 mb-4 items-center">
 		{#if blog.categories}
 			{#each blog.categories as category}
 				<div class="badge badge-lg bg-secondary">{category}</div>

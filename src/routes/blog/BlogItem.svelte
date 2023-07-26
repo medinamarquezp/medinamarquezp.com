@@ -16,7 +16,7 @@
 		</div>
 		<div class="relative">
 			<h3 class="font-semibold pt-8 lg:pt-0 text-2xl">{blog.title}</h3>
-			<div class="flex flex-col sm:flex-row gap-2 mt-4 sm:mt-2 mb-4 items-start sm:items-center">
+			<div class="flex flex-col sm:flex-row gap-1 mt-4 sm:mt-2 mb-4 items-start sm:items-center">
 				{ #if blog.categories }
 					{#each blog.categories as category}
 						<div class="badge badge-lg bg-secondary">{category}</div>
