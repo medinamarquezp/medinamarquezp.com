@@ -6,13 +6,13 @@ import type {
 	BlogProps,
 	ProjectItem
 } from '$lib/types';
-import { notionClient } from './client';
 import {
 	parseTechResult,
 	parseTimelineResult,
 	parseBlogResult,
 	parseProjectResult
 } from './parsers';
+import { notionClient } from './client';
 
 class NotionBlocks {
 	private client: typeof notionClient;
@@ -61,7 +61,7 @@ class NotionBlocks {
 		}
 		return this.timeline;
 	}
-	async getBlogs(props?: BlogProps): Promise<BlogItem[]> {
+	private async getBlogs(props?: BlogProps): Promise<BlogItem[]> {
 		const blogsDB = env.NOTION_BLOGS_DB as string;
 		const { slug, categories } = props || {};
 		const results = await this.client.queryDatabase({

@@ -3,7 +3,6 @@
 	import SeoTags from '$lib/components/SeoTags.svelte';
 	import FeedHeader from '$lib/components/FeedHeader.svelte';
 	import ProjectItem from './ProjectItem.svelte';
-
 	export let data: PageData;
 </script>
 

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { TimelineItem } from '$lib/types';
-	import { IconBriefcase, IconSchool } from '@tabler/icons-svelte';
 	import TechsList from '$lib/components/TechsList.svelte';
 	import { formatTimelineDate } from '$lib/utilities/dates';
+	import { IconBriefcase, IconSchool } from '@tabler/icons-svelte';
 
 	export let item: TimelineItem;
 	export let direction: 'left' | 'right';

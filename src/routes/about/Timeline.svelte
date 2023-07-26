@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { TimelineItem } from '$lib/types';
 	import TimelineCard from './TimelineCard.svelte';
-	
 	export let timelineItems: TimelineItem[]
 </script>
 

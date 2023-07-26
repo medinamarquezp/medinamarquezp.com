@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { IconRss } from '@tabler/icons-svelte';
-
 	export let title: string;
 	export let feedPath: string | null = null;
 </script>

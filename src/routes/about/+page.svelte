@@ -2,14 +2,13 @@
 	import type { PageData } from './$types';
 	import SeoTags from '$lib/components/SeoTags.svelte';
 	import { techs, softSkills, hardSkills } from '$lib/contents/about';
+	import Timeline from './Timeline.svelte';
 	import BadgetList from './BadgetList.svelte';
 	import TechsCarousel from './TechsCarousel.svelte';
-	import Timeline from './Timeline.svelte';
-
+	
 	export let data: PageData;
 	let skills = 'soft';
 	let timeline = 'complete';
-
 	$: badgets = skills === 'soft' ? softSkills : hardSkills;
 	$: timelineItems =
 		timeline === 'complete'

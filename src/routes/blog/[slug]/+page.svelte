@@ -4,10 +4,11 @@
 	import CardsGrid from '$lib/components/CardsGrid.svelte';
 	import ShareOnTwitter from '$lib/components/ShareOnTwitter.svelte';
 	import { blogsToCards } from '$lib/utilities/transformers';
+	import './blogDetails.css'
 
 	export let data: PageData;
 	$: blog = data.blog;
-	$: items = (blogsToCards(blog.related || []));
+	$: items = blogsToCards(blog.related || []);
 </script>
 
 <SeoTags
@@ -54,7 +55,7 @@
 			</p>
 		</div>
 	{/if}
-	<div class="blog leading-relaxed">
+	<div class="content leading-relaxed">
 		{@html blog.content}
 	</div>
 	<div class="flex justify-center mt-10">

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Card } from '$lib/types';
 	import CardItem from './CardItem.svelte';
-	
 	export let title: string
 	export let items: Card[]
 </script>

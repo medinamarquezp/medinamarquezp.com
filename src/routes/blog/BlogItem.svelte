@@ -1,9 +1,7 @@
 <script lang="ts">
 	import type { BlogItem } from "$lib/types";
 	import { IconCalendarEvent } from "@tabler/icons-svelte";
-
 	export let blog: BlogItem
-
 </script>
 
 <article class="relative group">

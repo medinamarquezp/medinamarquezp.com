@@ -36,7 +36,6 @@ const createFeedInstance = () => {
 export const generateFeed = async () => {
 	const feed = createFeedInstance();
 	const posts = await notionBlocks.getBlogsList();
-	console.log(posts);
 	posts.forEach((post) => {
 		feed.addItem({
 			title: post.title,

@@ -1,6 +1,6 @@
-import { formatDate } from '$lib/utilities/dates';
 import type { Tech, TimelineItem } from '../types';
 import { uploadFile } from '$lib/cloudinary';
+import { formatDate } from '$lib/utilities/dates';
 
 const processFiles = async (files: string | string[]) => {
 	if (!Array.isArray(files)) files = [files];
