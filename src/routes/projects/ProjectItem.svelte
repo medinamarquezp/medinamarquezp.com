@@ -13,10 +13,10 @@
 			<h1 class="text-4xl font-bold">
 				{project.title}
 			</h1>
-			<div class="flex flex-row gap-2 sm:gap-2 mt-5 mb-4 items-center">
+			<div class="inline mt-5 mb-4 items-center">
 				{#if project.categories}
 					{#each project.categories as category}
-						<div class="badge badge-lg bg-secondary">{category}</div>
+						<div class="badge badge-lg bg-secondary mr-1">{category}</div>
 					{/each}
 				{/if}
 			</div>

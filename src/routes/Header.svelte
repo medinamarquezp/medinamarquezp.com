@@ -5,7 +5,7 @@
 	import DarkmodeSwitcher from './DarkmodeSwitcher.svelte';
 </script>
 
-<div class="navbar">
+<div class="container navbar">
 	<div class="navbar-start">
 		{#if $navigating}
 			<span class="loading loading-spinner loading-lg text-secondary" />

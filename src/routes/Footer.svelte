@@ -6,7 +6,7 @@
 </script>
 
 <footer
-	class="mt-auto flex flex-col md:flex-row gap-2 text-md text-center md:text-left justify-between"
+	class="container mt-auto flex flex-col md:flex-row gap-2 text-md text-center md:text-left justify-between"
 >
 	<div>
 		<SocialContact />
