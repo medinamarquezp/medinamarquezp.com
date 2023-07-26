@@ -11,5 +11,5 @@
 	class="flex flex-row w-full sm:w-auto font-normal text-white gap-2 justify-center items-center py-4 px-6 rounded-full bg-blue-500 hover-scale"
 	target="_blank"
 	href={`https://twitter.com/share?url=${url}&text=${text}`}
-	><IconBrandTwitterFilled size={22} /> Compártelo en Twitter 💪</a
+	><IconBrandTwitterFilled size={22} /> Compártelo en Twitter <span class="hidden sm:inline">💪</span></a
 >

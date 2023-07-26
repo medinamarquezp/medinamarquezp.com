@@ -11,9 +11,7 @@
 	description="El rincón de las ideas locas 🤪. Un lugar donde construir, experimentar y desarrollar, cuyo principal objetivo es convertir problemas en soluciones"
 />
 
-<div
-	class="container px-6 sm:px-12 lg:px-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
->
+<div class="container-content">
 	<FeedHeader title="Proyectos">
 		<svelte:fragment slot="description">
 			El rincón de las ideas locas 🤪. Un lugar donde construir, experimentar y
@@ -24,12 +22,14 @@
 		</svelte:fragment>
 	</FeedHeader>
 	<div class="mt-20">
-		{ #if data.projects.length }
+		{#if data.projects.length}
 			{#each data.projects as project}
 				<ProjectItem {project} />
 			{/each}
-		{ :else }
-			<p class="text-center text-slate-500 text-2xl">No hay proyectos para mostrar</p>
-		{/if }
+		{:else}
+			<p class="text-center text-slate-500 text-2xl">
+				No hay proyectos para mostrar
+			</p>
+		{/if}
 	</div>
 </div>

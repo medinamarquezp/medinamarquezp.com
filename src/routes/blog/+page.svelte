@@ -16,9 +16,7 @@
 	description="El rincón de las reflexiones 🤔. Un lugar donde curiosear, aprender y compartir, cuyo principal objetivo es plasmar pensamientos aleatorios"
 />
 
-<div
-	class="container px-6 sm:px-12 lg:px-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
->
+<div class="container-content">
 	<FeedHeader title="Últimas novedades" feedPath="/rss.xml">
 		<svelte:fragment slot="description">
 			El rincón de las reflexiones 🤔. Un lugar donde curiosear, aprender y

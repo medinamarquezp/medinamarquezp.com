@@ -23,7 +23,7 @@
 />
 
 <div
-	class="container px-6 sm:px-12 lg:px-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
+	class="container-content"
 >
 	<section
 		class="flex flex-col-reverse md:flex-row gap-6 items-center md:items-start"

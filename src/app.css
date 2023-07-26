@@ -32,3 +32,7 @@ p:last-child {
 .hover-scale {
 	@apply transition duration-100 hover:scale-110;
 }
+
+.container-content {
+	@apply container mx-auto px-6 sm:px-12 lg:px-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in;
+}
