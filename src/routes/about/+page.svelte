@@ -19,7 +19,7 @@
 
 <SeoTags
 	title="Sobre mí"
-	description="Diseñador y desarrollador de software curioso, creativo e inquieto. Tras diplomarme en comunicación gráfica publicitaria, mi pasión por la tecnología y el mundo digital me llevó a especializarme en desarrollo de software, particularmente en tecnologías web y multiplataforma."
+	description="Diseñador y desarrollador de software curioso, creativo e inquieto. Tras diplomarme en comunicación gráfica publicitaria, mi pasión por la tecnología y el mundo digital me llevó a especializarme en desarrollo de software, particularmente en tecnologías web y multiplataforma"
 	image="/me.jpg"
 />
 

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	export let title = '¡Hola soy Pedro! Te doy la bienvenida a mi weblog.';
+	export let title = '¡Hola soy Pedro! Te doy la bienvenida a mi weblog';
 	export let description =
-		'Disfruto creando productos robustos, escalables y resilientes y por el camino me entretengo dando vida a todas las ideas locas 🤪 que se me pasan por la cabeza.';
+		'Disfruto creando productos robustos, escalables y resilientes y por el camino me entretengo dando vida a todas las ideas locas 🤪 que se me pasan por la cabeza';
 	export let keywords =
 		'diseño, desarrollo web, emprendimiento, solopreneur, indiehacker, maker, buildinginpublic';
 	export let image: string | null = null;

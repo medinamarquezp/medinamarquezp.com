@@ -1,12 +1,15 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { blogsToCards } from '$lib/utilities/transformers';
+	import SeoTags from '$lib/components/SeoTags.svelte';
 	import CardsGrid from '$lib/components/CardsGrid.svelte';
 	import SocialContact from '$lib/components/SocialContact.svelte';
 
 	export let data: PageData;
 	$: items = (blogsToCards(data.latest));
 </script>
+
+<SeoTags />
 
 <div
 	class="mx-6 sm:mx-12 lg:mx-24 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"

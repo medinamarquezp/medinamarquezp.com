@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
-	import SeoTags from '$lib/components/SeoTags.svelte';
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
 	import '../app.css';
@@ -10,8 +9,6 @@
 		themeChange(false);
 	});
 </script>
-
-<SeoTags />
 
 <svelte:head>
 	<link href="https://unpkg.com/pattern.css" rel="stylesheet" />

@@ -13,7 +13,7 @@
 
 <SeoTags
 	title="Blog"
-	description="El rincon de las reflexiones 🤔. Un lugar donde curiosear, aprender y compartir, cuyo principal objetivo es plasmar pensamientos aleatorios."
+	description="El rincon de las reflexiones 🤔. Un lugar donde curiosear, aprender y compartir, cuyo principal objetivo es plasmar pensamientos aleatorios"
 />
 
 <div
