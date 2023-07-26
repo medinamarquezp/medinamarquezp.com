@@ -39,6 +39,7 @@
 	"type": "module",
 	"dependencies": {
 		"@notionhq/client": "^2.2.8",
+		"@sveltejs/adapter-static": "^2.0.2",
 		"@tabler/icons-svelte": "^2.25.0",
 		"cloudinary": "^1.39.0",
 		"feed": "^4.2.2",

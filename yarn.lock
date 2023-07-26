@@ -404,6 +404,11 @@
   dependencies:
     import-meta-resolve "^3.0.0"
 
+"@sveltejs/adapter-static@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-2.0.2.tgz#49afd27787fb73d789017d002a91031088494139"
+  integrity sha512-9wYtf6s6ew7DHUHMrt55YpD1FgV7oWql2IGsW5BXquLxqcY9vjrqCFo0TzzDpo+ZPZkW/v77k0eOP6tsAb8HmQ==
+
 "@sveltejs/adapter-vercel@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-3.0.2.tgz#24c5e1b40564d9a7b45e2217f017c57ac25de50d"

@@ -61,7 +61,7 @@ class NotionBlocks {
 		}
 		return this.timeline;
 	}
-	private async getBlogs(props?: BlogProps): Promise<BlogItem[]> {
+	async getBlogs(props?: BlogProps): Promise<BlogItem[]> {
 		const blogsDB = env.NOTION_BLOGS_DB as string;
 		const { slug, categories } = props || {};
 		const results = await this.client.queryDatabase({
