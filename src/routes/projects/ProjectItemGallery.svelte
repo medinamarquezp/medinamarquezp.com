@@ -5,7 +5,7 @@
 
 <div class="w-full md:w-1/2">
 	<div class="pattern-dots-md text-secondary rounded-xl">
-		<div class="carousel w-full -ml-8 md:ml-0 -translate-y-4 translate-x-5">
+		<div class="carousel w-full -ml-8 md:ml-0 -translate-y-2 translate-x-4">
 			{#if images.length}
 				{#each images as image, i}
 					<div class="carousel-item w-full max-h-96">
