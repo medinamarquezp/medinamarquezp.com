@@ -13,11 +13,11 @@
 
 <div class="container-content">
 	<h1
-		class="mt-5 text-5xl md:text-7xl !leading-snug tracking-tight font-bold bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text"
+		class="mt-5 text-4xl sm:text-5xl md:text-6xl !leading-snug tracking-tight font-bold bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text"
 	>
 		¡Hola, soy Pedro!
 	</h1>
-	<p class="mt-2 text-2xl font-normal leading-normal">
+	<p class="mt-2 text-xl sm:text-2xl font-normal leading-normal">
 		<span class="underline decoration-primary decoration-wavy">
 			Diseñador y desarrollador de software curioso, creativo e inquieto.</span
 		>
@@ -29,7 +29,7 @@
 		> si estos me resultan interesantes y retadores.
 	</p>
 	<div class="mt-6">
-		<p class="mb-2 text-2xl font-medium">¿Hablamos?</p>
+		<p class="mb-2 text-xl sm:text-2xl font-medium">¿Hablamos?</p>
 		<SocialContact justify={false} />
 	</div>
 	<CardsGrid title="Novedades" {items} />
