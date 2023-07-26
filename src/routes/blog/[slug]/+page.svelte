@@ -40,7 +40,7 @@
 			class="mt-12 -ml-8 mb-5 sm:mt-14 pattern-dots-md text-secondary rounded-xl"
 		>
 			<img
-				class="rounded-lg -translate-y-6 translate-x-6"
+				class="rounded-lg -translate-y-5 translate-x-4"
 				src={blog.hero}
 				alt={blog.title}
 			/>
