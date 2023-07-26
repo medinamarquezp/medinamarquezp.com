@@ -15,16 +15,16 @@
 			<IconCalendarEvent class="text-white mt-1 ml-1" size={24} stroke={2} />
 		</div>
 		<div class="relative">
-			<h3 class="font-semibold pt-8 lg:pt-0 text-2xl">{blog.title}</h3>
-			<div class="flex flex-col sm:flex-row gap-1 mt-4 sm:mt-2 mb-4 items-start sm:items-center">
+			<h3 class="text-2xl font-semibold pt-8 lg:pt-0">{blog.title}</h3>
+			<div class="flex flex-row gap-1 mt-4 sm:mt-2 mb-2 items-start sm:items-center">
 				{ #if blog.categories }
 					{#each blog.categories as category}
 						<div class="badge badge-lg bg-secondary">{category}</div>
 					{/each}
 				{/if}
-				<div class="text-lg text-slate-500">
-					{"☕️".repeat(Math.ceil(blog.reading_time / 15))} <span class="pl-1">(Léelo en {blog.reading_time} minutos)</span>
-				</div>
+			</div>
+			<div class="flex flex-row text-lg text-slate-500 mb-2">
+				{"☕️".repeat(Math.ceil(blog.reading_time / 15))} <span class="pl-1">(Léelo en {blog.reading_time} minutos)</span>
 			</div>
 			<div
 				class="mb-4 prose prose-slate prose-a:relative prose-a:z-10 dark:prose-dark line-clamp-2"

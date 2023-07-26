@@ -19,22 +19,21 @@
 />
 
 <div
-	class="container mx-auto px-8 sm:px-16 lg:px-60 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
+	class="container mx-auto px-4 md:px-6 lg:px-24 xl:px-48 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
 >
 	<span class="text-slate-500">{blog.created_at}</span>
 	<h1 class="text-4xl font-bold">
 		{blog.title}
 	</h1>
-	<div class="flex flex-col sm:flex-row gap-1 mt-5 mb-4 items-center">
-		{#if blog.categories}
+	<div class="flex flex-row gap-1 mt-4 sm:mt-2 mb-2 items-start sm:items-center">
+		{ #if blog.categories }
 			{#each blog.categories as category}
 				<div class="badge badge-lg bg-secondary">{category}</div>
 			{/each}
 		{/if}
-		<div class="text-lg text-slate-500">
-			{'☕️'.repeat(Math.ceil(blog.reading_time / 15))}
-			<span class="pl-1">(Léelo en {blog.reading_time} minutos)</span>
-		</div>
+	</div>
+	<div class="flex flex-row text-lg text-slate-500 mb-2">
+		{"☕️".repeat(Math.ceil(blog.reading_time / 15))} <span class="pl-1">(Léelo en {blog.reading_time} minutos)</span>
 	</div>
 	{#if blog.hero}
 		<div
