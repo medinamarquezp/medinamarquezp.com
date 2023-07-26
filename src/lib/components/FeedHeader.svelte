@@ -13,7 +13,7 @@
 			</a>
 		{/if}
 	</div>
-	<div class="w-full md:w-1/2 mt-2">
+	<div class="w-full lg:w-2/3 mt-2">
 		<slot name="description" />
 	</div>
 	<slot />

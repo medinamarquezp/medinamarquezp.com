@@ -26,9 +26,9 @@
 	class="container-content"
 >
 	<section
-		class="flex flex-col-reverse md:flex-row gap-6 items-center md:items-start"
+		class="flex flex-col-reverse lg:flex-row gap-6 items-center lg:items-start"
 	>
-		<div class="w-full md:w-2/3">
+		<div class="w-full lg:w-2/3">
 			<h1 class="text-4xl mb-2 font-bold">Sobre mí</h1>
 			<div>
 				<p>
