@@ -13,7 +13,7 @@
 
 <div class="mt-6 lg:mt-0 lg:mb-10">
 	<div
-		class:lg:-mt-40={!isFisrtElement}
+		class:lg:-mt-36={!isFisrtElement}
 		class="flex flex-col lg:flex-row items-center mt-0"
 	>
 		<div class="flex {justify} w-full mx-auto items-center">
