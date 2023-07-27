@@ -12,8 +12,8 @@ p:last-child {
 }
 
 ::-webkit-scrollbar {
-	height: 4px;
-	width: 5px;
+	height: 5px;
+	width: 8px;
 }
 
 ::-webkit-scrollbar-track {
