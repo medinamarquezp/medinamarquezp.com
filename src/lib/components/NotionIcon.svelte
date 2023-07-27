@@ -7,7 +7,7 @@
 	height={size}
 	width={size}
     class={className}
-	xmlns="http://www.w3.org/2000/svg"
+	xmlns="https://www.w3.org/2000/svg"
 	fill="currentColor"
 	viewBox="12 0.18999999999999906 487.619 510.941"
 	><path
