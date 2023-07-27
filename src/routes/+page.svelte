@@ -28,7 +28,7 @@
 			>Ocasionalmente, acepto colaboraciones en proyectos como freelance</span
 		> si estos me resultan interesantes y retadores.
 	</p>
-	<div class="mt-6">
+	<div class="mt-6 lg:mt-10">
 		<p class="mb-2 text-xl sm:text-2xl font-medium">¿Hablamos?</p>
 		<SocialContact justify={false} />
 	</div>
