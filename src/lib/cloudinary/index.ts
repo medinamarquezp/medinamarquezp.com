@@ -17,7 +17,7 @@ export const uploadFile = async (file: string, name: string) => {
 			access_mode: 'public',
 			use_filename: true
 		});
-		return response.url;
+		return response.secure_url;
 	} catch (error) {
 		console.error(error);
 	}
