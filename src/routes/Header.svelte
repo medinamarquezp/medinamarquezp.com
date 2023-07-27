@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { navigating } from '$app/stores';
 	import { IconMenuDeep } from '@tabler/icons-svelte';
-	import MainNav from './MainNav.svelte';
-	import DarkmodeSwitcher from './DarkmodeSwitcher.svelte';
+	import DarkmodeSwitcher from '$lib/components/DarkmodeSwitcher.svelte';
+	import MainNav from '$lib/components/MainNav.svelte';
 </script>
 
 <div class="container mx-auto navbar">
