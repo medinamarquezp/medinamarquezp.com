@@ -7,7 +7,7 @@
 	export let keywords =
 		'diseño, desarrollo web, emprendimiento, solopreneur, indiehacker, maker, buildinginpublic';
 	export let image: string | null = null;
-	const pageUrl = `${env.PUBLIC_SITE_URL}${$page.url.pathname}${$page.url.search}`
+	const pageUrl = `${env.PUBLIC_SITE_URL}${$page?.url?.pathname}${$page?.url?.search || ''}`
 </script>
 
 <svelte:head>
