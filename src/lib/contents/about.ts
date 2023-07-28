@@ -2,27 +2,14 @@ export const softSkills = [
 	'Aprendizaje continuo',
 	'Adaptabilidad al cambio',
 	'Atención al detalle',
-	'Resolución de problemas',
-	'Abstracción',
-	'Autogestión',
-	'Capacidad de análisis',
-	'Creatividad',
-	'Proactividad',
-	'Trabajo en equipo',
-	'Comunicación',
-	'Gestión del tiempo'
+	'Resolución de problemas'
 ];
 
 export const hardSkills = [
 	'Diseño UX/UI',
-	'Arquitectura de software',
 	'Desarrollo Frontend',
 	'Desarrollo Backend',
-	'Desarrollo de Smart Contracts',
-	'Desarrollo de aplicaciones móviles',
-	'Automatización de procesos',
-	'DevOps',
-	'Gestión de proyectos'
+	'Automatización de procesos'
 ];
 
 export const techs = [
