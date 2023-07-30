@@ -79,7 +79,9 @@ export const parseTechResult = (item: any) => {
 };
 
 export const parseBlogResult = async (item: any) => {
-	const hero = await processFiles(item.properties.hero.files[0].file.url);
+	const hero = item.properties.hero?.files.length
+		? await processFiles(item.properties.hero.files[0].file.url)
+		: [];
 	return {
 		id: item.id,
 		slug: item.properties.slug.rich_text[0].plain_text,
@@ -87,10 +89,10 @@ export const parseBlogResult = async (item: any) => {
 		categories: item.properties.categories.multi_select.map(
 			(category: any) => category.name
 		),
-		excerpt: item.properties.excerpt.rich_text[0].plain_text,
+		excerpt: item.properties.excerpt?.rich_text[0]?.plain_text,
 		published: item.properties.published.checkbox,
 		hero: hero.length ? hero[0] : null,
-		tldr: item.properties.tldr.rich_text[0].plain_text,
+		tldr: item.properties.tldr?.rich_text[0]?.plain_text,
 		reading_time: item.properties.reading_time.formula.number,
 		created_at_timestamp: new Date(item.created_time).getTime(),
 		created_at: formatDate(new Date(item.created_time), {
