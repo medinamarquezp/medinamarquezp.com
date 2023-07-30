@@ -3,6 +3,11 @@ import { compile } from 'mdsvex';
 import { Client } from '@notionhq/client';
 import { NotionToMarkdown } from 'notion-to-md';
 import type { QueryDatabaseParameters } from '@notionhq/client/build/src/api-endpoints';
+import {
+	parseMarkdownCode,
+	parseMarkdownImages,
+	parseMarkdownTwitter
+} from './parsers';
 
 export class NotionClient {
 	private notion: Client;
@@ -25,9 +30,13 @@ export class NotionClient {
 		const mdblocks = await n2m.pageToMarkdown(id);
 		const mdString = n2m.toMarkdownString(mdblocks);
 		const mdCompiled = await compile(mdString.parent);
-		return mdCompiled?.code
-			.replace(/>{@html `<code class="language-/g, '><code class="language-')
-			.replace(/<\/code>`}<\/pre>/g, '</code></pre>');
+		let content = '';
+		if (mdCompiled?.code) {
+			content = await parseMarkdownImages(mdCompiled.code);
+			content = parseMarkdownTwitter(content);
+			content = parseMarkdownCode(content);
+		}
+		return content;
 	}
 }
 

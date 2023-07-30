@@ -1,3 +1,5 @@
+import { env } from '$env/dynamic/private';
+import * as cheerio from 'cheerio';
 import type { Tech, TimelineItem } from '../types';
 import { uploadFile } from '$lib/cloudinary';
 import { formatDate } from '$lib/utilities/dates';
@@ -13,6 +15,41 @@ const processFiles = async (files: string | string[]) => {
 	return processedFiles.length === 1 && !Array.isArray(files)
 		? processedFiles[0]
 		: processedFiles;
+};
+
+export const parseMarkdownImages = async (content: string) => {
+	const $ = cheerio.load(content);
+	if ($('img').length) {
+		for (const image of $('img')) {
+			const src = $(image).attr('src') as string;
+			const uploadedImage = (await processFiles(src))[0];
+			$(image).attr('src', uploadedImage);
+		}
+	}
+	return $.html();
+};
+
+export const parseMarkdownTwitter = (content: string) => {
+	const $ = cheerio.load(content);
+	const twitterDomain = env.TWITTER_USERNAME_PATH as string;
+	$('a[href^="' + twitterDomain + '"]').each((index, element) => {
+		const currentHref = $(element).attr('href');
+		const blockquoteHTML = `
+			<div class="flex justify-center">
+				<blockquote class="twitter-tweet">
+	  				<a href="${currentHref}"></a>
+				</blockquote>
+			</div>
+		`;
+		$(element).replaceWith(blockquoteHTML);
+	});
+	return $.html();
+};
+
+export const parseMarkdownCode = (content: string) => {
+	return content
+		.replace(/>{@html `<code class="language-/g, '><code class="language-')
+		.replace(/<\/code>`}<\/pre>/g, '</code></pre>');
 };
 
 export const parseTimelineResult = async (

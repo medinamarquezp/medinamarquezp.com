@@ -18,6 +18,10 @@
 	keywords={blog.categories.join(', ')}
 />
 
+<svelte:head>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</svelte:head>
+
 <div
 	class="container mx-auto px-4 md:px-6 lg:px-24 xl:px-48 my-12 text-xl animate-fade animate-once animate-duration-300 animate-ease-in"
 >

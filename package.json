@@ -41,6 +41,7 @@
 	"dependencies": {
 		"@notionhq/client": "^2.2.8",
 		"@tabler/icons-svelte": "^2.25.0",
+		"cheerio": "^1.0.0-rc.12",
 		"cloudinary": "^1.39.0",
 		"feed": "^4.2.2",
 		"mdsvex": "^0.11.0",
