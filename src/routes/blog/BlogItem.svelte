@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { BlogItem } from "$lib/types";
+	import { coffeeReadingTime } from '$lib/utilities/dates';
 	import { IconCalendarEvent } from "@tabler/icons-svelte";
 	export let blog: BlogItem
 </script>
@@ -24,7 +25,7 @@
 				{/if}
 			</div>
 			<div class="flex flex-row text-lg text-slate-500 mb-2">
-				{"☕️".repeat(Math.ceil(blog.reading_time / 15))} <span class="pl-1">(Léelo en {blog.reading_time} minutos)</span>
+				{coffeeReadingTime(blog.reading_time)} <span class="pl-1">(Léelo en {blog.reading_time} minutos)</span>
 			</div>
 			<div
 				class="mb-4 prose prose-slate prose-a:relative prose-a:z-10 dark:prose-dark line-clamp-2"

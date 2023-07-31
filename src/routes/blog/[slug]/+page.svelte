@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { coffeeReadingTime } from '$lib/utilities/dates';
+	import { blogsToCards } from '$lib/utilities/transformers';
 	import SeoTags from '$lib/components/SeoTags.svelte';
 	import CardsGrid from '$lib/components/CardsGrid.svelte';
 	import ShareOnTwitter from '$lib/components/ShareOnTwitter.svelte';
-	import { blogsToCards } from '$lib/utilities/transformers';
 	import './blogDetails.css'
 
 	export let data: PageData;
@@ -37,7 +38,7 @@
 		{/if}
 	</div>
 	<div class="flex flex-row text-lg text-slate-500 mb-2">
-		{"☕️".repeat(Math.ceil(blog.reading_time / 15))} <span class="pl-1">(Léelo en {blog.reading_time} minutos)</span>
+		{ coffeeReadingTime(blog.reading_time) } <span class="pl-1">(Léelo en {blog.reading_time} minutos)</span>
 	</div>
 	{#if blog.hero}
 		<div

@@ -11,3 +11,7 @@ export const formatTimelineDate = (date: Date | null) => {
 	}
 	return 'Actualmente';
 };
+
+export const coffeeReadingTime = (readingTime: number) => {
+	return '☕️'.repeat(Math.ceil(readingTime / 5));
+};
