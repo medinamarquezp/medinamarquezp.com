@@ -6,7 +6,8 @@ import type { QueryDatabaseParameters } from '@notionhq/client/build/src/api-end
 import {
 	parseMarkdownCode,
 	parseMarkdownImages,
-	parseMarkdownTwitter
+	parseMarkdownTwitter,
+	parseTargetBlank
 } from './parsers';
 
 export class NotionClient {
@@ -35,6 +36,7 @@ export class NotionClient {
 			content = await parseMarkdownImages(mdCompiled.code);
 			content = parseMarkdownTwitter(content);
 			content = parseMarkdownCode(content);
+			content = parseTargetBlank(content);
 		}
 		return content;
 	}

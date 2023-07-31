@@ -46,6 +46,14 @@ export const parseMarkdownTwitter = (content: string) => {
 	return $.html();
 };
 
+export const parseTargetBlank = (content: string) => {
+	const $ = cheerio.load(content);
+	$('a').each((index, element) => {
+		$(element).attr('target', '_blank');
+	});
+	return $.html();
+};
+
 export const parseMarkdownCode = (content: string) => {
 	return content
 		.replace(/>{@html `<code class="language-/g, '><code class="language-')
