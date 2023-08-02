@@ -19,7 +19,7 @@
 	</h1>
 	<p class="mt-2 text-xl sm:text-2xl font-normal leading-normal">
 		<span class="underline decoration-primary decoration-wavy">
-			Diseñador y desarrollador de software curioso, creativo e inquieto.</span
+			Diseñador y desarrollador de software curioso e inquieto.</span
 		>
 		Disfruto creando productos robustos, escalables y resilientes y, por el
 		camino, me entretengo dando vida a todas las ideas locas 🤪 que se me pasan
