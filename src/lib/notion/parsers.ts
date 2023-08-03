@@ -46,7 +46,7 @@ export const parseMarkdownTwitter = (content: string) => {
 	return $.html();
 };
 
-export const parseTargetBlank = (content: string) => {
+export const parseMarkdownTargetBlank = (content: string) => {
 	const $ = cheerio.load(content);
 	$('a').each((index, element) => {
 		$(element).attr('target', '_blank');
