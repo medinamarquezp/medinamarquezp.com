@@ -124,7 +124,7 @@ export const parseProjectResult = async (
 		categories: item.properties.categories.multi_select.map(
 			(category: any) => category.name
 		),
-		phase: item.properties.phase.status.name,
+		phase: item.properties.phase.multi_select[0].name,
 		description: item.properties.description.rich_text[0].plain_text,
 		images,
 		techs: item.properties.techs.relation.map((tech: any) =>
