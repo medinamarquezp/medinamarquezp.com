@@ -19,7 +19,5 @@
 	{:else if theme === 'cupcake'}
 		<IconSunLow class="swap-on fill-current w-8 h-8" />
 		<IconMoon class="swap-off fill-current w-8 h-8" />
-	{:else}
-		&nbsp;
 	{/if}
 </label>

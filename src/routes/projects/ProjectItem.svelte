@@ -20,11 +20,11 @@
 					{/each}
 				{/if}
 			</div>
-			<div class="uppercase text-lg  text-slate-500">
+			<div class="uppercase text-base  text-slate-500">
 				Fase <span class="font-bold">{project.phase}</span>
 			</div>
 			{#if project.url}
-				<div class="text-lg text-slate-500">
+				<div class="text-base text-slate-500">
 					URL <a class="font-bold" target="_blank" href={project.url}>{new URL(project.url).hostname}</a>
 				</div>
 			{/if}
