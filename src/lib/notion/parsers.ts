@@ -134,6 +134,7 @@ export const parseProjectResult = async (
 			month: 'long',
 			day: 'numeric',
 			year: 'numeric'
-		})
+		}),
+		url: item.properties.url.url
 	};
 };
