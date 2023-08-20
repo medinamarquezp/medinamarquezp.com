@@ -12,7 +12,7 @@
 						<img
 							id={`item${i + 1}`}
 							src={image}
-							class="w-full rounded-xl"
+							class="object-cover rounded-xl"
 							alt={title}
 						/>
 					</div>
