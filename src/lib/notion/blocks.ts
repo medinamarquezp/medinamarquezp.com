@@ -125,10 +125,10 @@ class NotionBlocks {
 		return blog;
 	}
 
-	async getLatestsBlogs(): Promise<BlogItem[]> {
+	async getLatestsBlogs(items = 2): Promise<BlogItem[]> {
 		if (this.latestsBlogs.length) return this.latestsBlogs;
 		const blogs = await this.getBlogsList();
-		this.latestsBlogs = blogs.slice(0, 3);
+		this.latestsBlogs = blogs.slice(0, items);
 		return this.latestsBlogs;
 	}
 
