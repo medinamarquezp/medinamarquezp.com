@@ -8,7 +8,7 @@
 	let conteinerClasses =
 		'relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))] xl:ml-[max(calc(14.5rem+1px),calc(100%-64rem))]';
 	let timelineClasses =
-		'hidden absolute top-3 bottom-0 right-full mr-5 md:mr-[2.25rem] w-px bg-neutral-content sm:block';
+		'hidden absolute top-3 bottom-0 right-full mr-5 md:mr-[2.25rem] w-px bg-slate-300 sm:block';
 </script>
 
 <SeoTags

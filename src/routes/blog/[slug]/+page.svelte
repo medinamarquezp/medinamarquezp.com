@@ -68,7 +68,7 @@
 </div>
 
 {#if items.length}
-	<div class="mx-6 sm:mx-12 lg:mx-24 mt-0 mb-12 text-xl">
+	<div class="container mx-auto mt-0 mb-12 text-xl">
 		<CardsGrid title="🤔 También podría interesarte" {items} />
 	</div>
 {/if}

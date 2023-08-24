@@ -8,7 +8,7 @@
 	<div class="lg:mx-auto w-full">
 		<div class="relative transition">
 			<div
-				class="hidden lg:block w-px bg-neutral-content absolute h-full left-1/2 transform -translate-x-1/2"
+				class="hidden lg:block w-px bg-slate-300 absolute h-full left-1/2 transform -translate-x-1/2"
 			/>
 			{#each timelineItems as item, i}
 				{#if i % 2 === 0}
