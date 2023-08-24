@@ -4,7 +4,7 @@
 	let { title, date, path, content } = item;
 </script>
 
-<a href={path} class="card bg-neutral transition hover-scale hover:shadow-lg">
+<a rel="external" href={path} class="card bg-neutral transition hover-scale hover:shadow-lg">
 	<div class="card-body">
 		<h1 class="card-title">{title}</h1>
 		<span class="text-base text-slate-500 -mt-2">{date}</span>
