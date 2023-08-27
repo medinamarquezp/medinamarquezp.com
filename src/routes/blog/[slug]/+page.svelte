@@ -5,7 +5,7 @@
 	import SeoTags from '$lib/components/SeoTags.svelte';
 	import CardsGrid from '$lib/components/CardsGrid.svelte';
 	import ShareOnTwitter from '$lib/components/ShareOnTwitter.svelte';
-	import './blogDetails.css'
+	import './blogDetails.css';
 
 	export let data: PageData;
 	$: blog = data.blog;
@@ -20,7 +20,11 @@
 />
 
 <svelte:head>
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+	<script
+		async
+		src="https://platform.twitter.com/widgets.js"
+		charset="utf-8"
+	></script>
 </svelte:head>
 
 <div
@@ -30,25 +34,22 @@
 	<h1 class="text-4xl font-bold">
 		{blog.title}
 	</h1>
-	<div class="flex flex-row gap-1 mt-4 sm:mt-2 mb-2 items-start sm:items-center">
-		{ #if blog.categories }
+	<div
+		class="flex flex-row gap-1 mt-4 sm:mt-2 mb-2 items-start sm:items-center"
+	>
+		{#if blog.categories}
 			{#each blog.categories as category}
 				<div class="badge badge-lg bg-secondary">{category}</div>
 			{/each}
 		{/if}
 	</div>
 	<div class="flex flex-row text-lg text-slate-500 mb-2">
-		{ coffeeReadingTime(blog.reading_time) } <span class="pl-1">(Léelo en {blog.reading_time} minutos)</span>
+		{coffeeReadingTime(blog.reading_time)}
+		<span class="pl-1">(Léelo en {blog.reading_time} minutos)</span>
 	</div>
 	{#if blog.hero}
-		<div
-			class="mt-12 -ml-8 mb-5 sm:mt-14 pattern-dots-md text-secondary rounded-xl"
-		>
-			<img
-				class="rounded-lg -translate-y-5 translate-x-4"
-				src={blog.hero}
-				alt={blog.title}
-			/>
+		<div class="my-8">
+			<img class="rounded-lg" src={blog.hero} alt={blog.title} />
 		</div>
 	{/if}
 	{#if blog.tldr}

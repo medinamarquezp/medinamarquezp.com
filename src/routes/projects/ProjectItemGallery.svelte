@@ -5,8 +5,8 @@
 </script>
 
 <div class="w-full lg:w-1/2">
-	<div class="pattern-dots-md text-secondary rounded-xl">
-		<div class="carousel w-full -ml-8 md:ml-0 -translate-y-0 translate-x-6 lg:translate-x-2">
+	<div>
+		<div class="carousel w-full">
 			{#if images.length}
 				{#each images as image, i}
 					<div class="carousel-item w-full max-h-96">

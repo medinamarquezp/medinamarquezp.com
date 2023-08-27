@@ -104,7 +104,7 @@ export const parseBlogResult = async (item: any) => {
 		reading_time: item.properties.reading_time.formula.number,
 		created_at_timestamp: new Date(item.created_time).getTime(),
 		created_at: formatDate(new Date(item.created_time), {
-			month: 'long',
+			month: 'short',
 			day: 'numeric',
 			year: 'numeric'
 		})
@@ -135,6 +135,7 @@ export const parseProjectResult = async (
 			day: 'numeric',
 			year: 'numeric'
 		}),
-		url: item.properties.url.url
+		url: item.properties.url.url,
+		article: item.properties.article.url
 	};
 };

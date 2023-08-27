@@ -52,6 +52,7 @@ export interface ProjectItem {
 	categories: string[];
 	phase: string;
 	url?: string;
+	article?: string;
 	description: string;
 	images: string[];
 	techs: Tech[];

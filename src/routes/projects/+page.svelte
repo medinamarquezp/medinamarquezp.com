@@ -21,7 +21,7 @@
 			>.
 		</svelte:fragment>
 	</FeedHeader>
-	<div class="mt-20">
+	<div class="mt-14">
 		{#if data.projects.length}
 			{#each data.projects as project}
 				<ProjectItem {project} />
