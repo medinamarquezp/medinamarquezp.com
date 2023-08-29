@@ -1,15 +1,15 @@
 export const softSkills = [
-	'Aprendizaje continuo',
-	'Adaptabilidad al cambio',
-	'Atención al detalle',
-	'Resolución de problemas'
+	'📚 Aprendizaje continuo',
+	'🤹‍♀️ Adaptabilidad al cambio',
+	'🧐 Atención al detalle',
+	'💣 Resolución de problemas'
 ];
 
 export const hardSkills = [
-	'Diseño UX/UI',
-	'Desarrollo Frontend',
-	'Desarrollo Backend',
-	'Automatización de procesos'
+	'🎨 Diseño UX/UI',
+	'🏗️ Desarrollo Frontend',
+	'⚙️  Desarrollo Backend',
+	'🤖 Automatización de procesos'
 ];
 
 export const techs = [
