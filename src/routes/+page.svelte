@@ -17,16 +17,17 @@
 	>
 		¡Hola, soy Pedro!
 	</h1>
-	<p class="mt-2 text-xl sm:text-2xl font-normal leading-normal">
+	<p class="mt-2 text-2xl sm:text-3xl font-normal sm:!leading-[2.6rem]">
 		<span class="underline decoration-primary decoration-wavy">
-			Diseñador y desarrollador de software curioso e inquieto.</span
-		>
-		Disfruto creando productos robustos, escalables y resilientes y, por el
+			Diseñador y desarrollador Full Stack</span
+		> 🤹‍♀️ curioso e inquieto.
+		Disfruto creando productos <span class="underline decoration-primary decoration-wavy"
+		>robustos, escalables y resilientes </span> y, por el
 		camino, me entretengo dando vida a todas las ideas locas 🤪 que se me pasan
-		por la cabeza.
+		por la cabeza. Ocasionalmente,
 		<span class="underline decoration-primary decoration-wavy"
-			>Ocasionalmente, acepto colaboraciones en proyectos como freelance</span
-		> si estos me resultan interesantes y retadores.
+			> acepto colaboraciones en proyectos como freelance</span
+		> si estos me resultan retadores.
 	</p>
 	<div class="mt-6 lg:mt-10">
 		<p class="mb-2 text-xl sm:text-2xl font-medium">¿Hablamos?</p>
