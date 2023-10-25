@@ -52,14 +52,6 @@
 			<img class="rounded-lg" src={blog.hero} alt={blog.title} />
 		</div>
 	{/if}
-	{#if blog.tldr}
-		<div class="mb-10">
-			<span class="font-bold text-2xl">TL;DR</span>
-			<p class="italic">
-				{blog.tldr}
-			</p>
-		</div>
-	{/if}
 	<div class="content leading-relaxed">
 		{@html blog.content}
 	</div>
