@@ -25,7 +25,9 @@
 		<meta property="og:image" content={image} />
 	{/if}
 	<meta property="og:url" content={pageUrl} />
-	<meta name="twitter:card" content={title} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@medinamarquezp"/>
+	<meta name="twitter:creator" content="@medinamarquezp">
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
 	{#if image}
