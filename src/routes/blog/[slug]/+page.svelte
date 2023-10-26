@@ -14,7 +14,7 @@
 
 <SeoTags
 	title={blog.title}
-	description={blog.tldr}
+	description={blog.excerpt}
 	image={blog.hero}
 	keywords={blog.categories.join(', ')}
 />

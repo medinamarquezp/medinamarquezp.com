@@ -34,7 +34,6 @@ export interface BlogItem {
 	excerpt: string;
 	published: boolean;
 	hero?: string | null;
-	tldr: string;
 	reading_time: number;
 	created_at: string;
 	created_at_timestamp: number;

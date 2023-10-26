@@ -41,8 +41,8 @@ export const generateFeed = async () => {
 			title: post.title,
 			id: post.id,
 			link: `${siteUrl}/blog/${post.slug}`,
-			description: post.tldr,
-			content: post.tldr,
+			description: post.excerpt,
+			content: post.excerpt,
 			category: post.categories.map((category) => ({ name: category })),
 			author: [
 				{
