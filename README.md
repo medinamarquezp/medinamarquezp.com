@@ -1,6 +1,6 @@
 # 🤓 Weblog personal
 
-Código fuente de mi webblog personal, desarrollado utilizando:
+Código fuente de mi webblog personal, desarrollado utilizando las siguientes tecnologías:
 
 - [Sveltekit](https://kit.svelte.dev)
 - [Notion](https://developers.notion.com)
